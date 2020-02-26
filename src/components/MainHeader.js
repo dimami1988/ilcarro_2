@@ -10,7 +10,7 @@ class MainHeader extends React.Component{
                     <img  src={LogoLight} alt={'logo'} />
                 </div>
 
-                <nav className={'NavigationTextBlock'}>
+                <nav className='NavigationTextBlock'>
                     <p className={'navigationText'}>Search</p>
                     <p className={'navigationText'}>Let the car work</p>
                     <p className={'navigationText'}>Terms of use</p>
