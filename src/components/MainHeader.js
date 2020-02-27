@@ -5,7 +5,7 @@ import LogoLight from "../images/LogoLight.svg";
 class MainHeader extends React.Component{
     render() {
         return(
-            <div className={'mainNavigation'}>
+            <div className={'HeaderBox'}>
                 <div className={'LogoLight'}>
                     <img  src={LogoLight} alt={'logo'} />
                 </div>
@@ -17,6 +17,7 @@ class MainHeader extends React.Component{
                     <p className='navigationText'>Sign up</p>
                     <p className={'navigationText'}>Login</p>
                 </nav>
+
             </div>
         )
     }
