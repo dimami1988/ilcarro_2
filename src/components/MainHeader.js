@@ -1,13 +1,13 @@
 import React from "react";
-import LogoLight from "../images/LogoLight.svg";
+import Logo from "../images/LogoLight.svg";
 
 
 class MainHeader extends React.Component{
     render() {
         return(
             <div className={'HeaderBox'}>
-                <div className={'LogoLight'}>
-                    <img  src={LogoLight} alt={'logo'} />
+                <div className={'Logo'}>
+                    <img  src={Logo} alt={'logo'} />
                 </div>
 
                 <nav className='NavigationTextBlock'>
