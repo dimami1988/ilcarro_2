@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Footers.css';
 
 function Section1Footer() {
     return (
@@ -12,7 +12,7 @@ function Section1Footer() {
                     <div className="footer_text1">
                         <p>NEVER MISTAKEN FOR ANYTHING ELSE</p>
                     </div>
-                    <div className="footer_text2">
+                    <div className="footer_text2 ">
                         <p>Candy canes topping dessert jelly beans pie jelly beans sweet roll. Toffee
                             cotton candy
                             cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake

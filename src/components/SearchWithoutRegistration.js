@@ -1,5 +1,4 @@
 import React from "react";
-import MainBackGroundImage from "../images/742079-PSISLA-798.png";
 import Vehicle1Square from "../images/squareImages/azlk.png";
 
 

@@ -2,8 +2,13 @@ import React from "react";
 import Vehicle1 from "../images/zaz.png";
 import Vehicle2 from "../images/gaz.png";
 import Vehicle3 from "../images/azlk.png";
+const root = document.getElementById('root');
 
 class Section2MainBlock extends React.Component{
+
+
+
+
     render() {
         return(
                 <div className={"blueBackGround"} >
