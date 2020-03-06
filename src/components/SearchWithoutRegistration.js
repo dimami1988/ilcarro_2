@@ -27,10 +27,14 @@ class SearchWithoutRegistrationBlock extends React.Component{
 
                 </div>
 
-                <div className={"vehicleCardsContainer"}></div>
+                <div className={"vehicleCardsContainer inline-block"}></div>
                 <div><img src={Vehicle1Square} alt={'vehicle'}/></div>
-                <div></div>
-                <div></div>
+                <p className={"vehicleName2 vehicleName"}>BLACKSTAR</p>
+                <div className={"whitePriceBox"}>
+                    <p className={"dollarSign"}>$</p>
+                    <p className={"price"}>300</p>
+                    <p className={"perDay"}>PER DAY</p>
+                </div>
 
             </div>
         )
