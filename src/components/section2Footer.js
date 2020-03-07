@@ -1,10 +1,10 @@
 import React from "react";
-import Logo from "../images/Logo.png";
+import Logo from "../images/component.png";
 import Facebook from "../images/socialNets/facebookWhite.png";
 import Telegram from "../images/socialNets/telegramWhite.png";
 import VK from "../images/socialNets/vkWhite.png";
 import Instagram from "../images/socialNets/instagramWhite.png";
-import './Footers.css';
+
 
 function Section2Footer() {
 

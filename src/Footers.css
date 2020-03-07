@@ -2,7 +2,7 @@
 .footer1 {
     /*top: 825px;*/
     /*left: 0px;*/
-    width: 1920px;
+    width: 73em;
     height: 200px;
     background: #062639 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -182,7 +182,7 @@
     color: #FFFFFF;
     opacity: 1;
     margin-right: 0em;
-
+    border-bottom: 5px solid green;
 
 }
 
