@@ -26,7 +26,16 @@ class App extends React.Component {
     }
     showSignUp= (isShowSignUp)=>{
         this.setState({isShowSignUp:true})
+    //    #join_footer_button
     };
+
+
+
+
+
+
+
+
 
    render() {
         if (this.state.isShowSignUp) {
