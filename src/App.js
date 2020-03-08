@@ -13,6 +13,7 @@ import Section1Footer from "./components/section1Footer";
 import Section2Footer from "./components/section2Footer";
 import './App.css';
 import './Footers.css';
+import Component1 from "./components/Component";
 
 class App extends React.Component {
 
@@ -65,6 +66,7 @@ class App extends React.Component {
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
                 <Section2Footer/>
+                {/*<Component1></Component1>*/}
             </div>
 
         )
