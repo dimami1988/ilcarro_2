@@ -91,6 +91,10 @@
     justify-content: flex-start;
 }
 
+.hidden {
+    display: none;
+}
+
 /*Далее работаю с FOOTER 2-й страницы*/
 /*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
 /*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
@@ -106,7 +110,7 @@
     /*padding: 0em 0em 0em 0em;*/
 }
 
-.footer2_flex {
+.footer2 {
     width: 73em;
     display: flex;
 }

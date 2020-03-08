@@ -15,27 +15,18 @@ import Section2Footer from "./components/section2Footer";
 import './App.css';
 import './Footers.css';
 
-
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             isShowSignUp: false
         };
-
     }
+
     showSignUp= (isShowSignUp)=>{
         this.setState({isShowSignUp:true})
     //    #join_footer_button
     };
-
-
-
-
-
-
-
-
 
    render() {
         if (this.state.isShowSignUp) {
@@ -51,17 +42,15 @@ class App extends React.Component {
                 <MainHeader showSignUp={this.showSignUp}/>
                 <DatePicker1/>
                 <FindYourCarBlock showSignUp={this.showSignUp}/>
-                <Section1Footer/>
+                <Section1Footer showSignUp={this.showSignUp}/>
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
                 <Section2Footer/>
                 <SearchWithoutRegistrationBlock/>
             </div>
-
         )
     }
-
 
   renderSignUp() {
     return (
@@ -69,7 +58,7 @@ class App extends React.Component {
                   <MainHeader showSignUp={this.showSignUp}/>
             <DatePicker1/>
             <SignUp/>
-            <Section1Footer/>
+            <Section1Footer showSignUp={this.showSignUp}/>
             <MostPopular/>
             <Section2MainBlock/>
             <FeedBacks2Rows/>
@@ -77,8 +66,8 @@ class App extends React.Component {
             <LoginForm/>
             <SearchWithoutRegistrationBlock/>
         </div>
-
     )
   }
 }
+
 export default App;
