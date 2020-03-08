@@ -5,6 +5,7 @@ import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 class DatePicker1 extends Component {
 
 
@@ -35,4 +36,4 @@ class DatePicker1 extends Component {
 }
 
 
-
+export default DatePicker1;

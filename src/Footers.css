@@ -2,7 +2,7 @@
 .footer1 {
     /*top: 825px;*/
     /*left: 0px;*/
-    width: 73em;
+
     height: 200px;
     background: #062639 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -15,7 +15,7 @@
 .footer_text1 {
     top: 921px;
     left: 184px;
-    width: 11em;
+
     height: 2em;
     text-align: left;
     font: Bold 25px/30px Bebas Neue;
@@ -93,11 +93,6 @@
 
 /*Далее работаю с FOOTER 2-й страницы*/
 /*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
-/*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
-/*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
-/*Далее работаю с FOOTER 2-й страницы*/
-
-
 
 .footer2_beginning {
     height: 65px;
@@ -182,7 +177,7 @@
     color: #FFFFFF;
     opacity: 1;
     margin-right: 0em;
-    border-bottom: 5px solid green;
+
 
 }
 
@@ -257,4 +252,9 @@ background-color: gold;
     font: Bold 8px/0px Raleway;
     color: darkgrey;
 
+}
+
+.hidden{
+    display: none;
+    visibility: hidden;
 }

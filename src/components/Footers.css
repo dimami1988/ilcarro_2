@@ -258,3 +258,8 @@ background-color: gold;
     color: darkgrey;
 
 }
+
+.hidden{
+    display: none;
+    visibility: hidden;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import UserPic from "../images/userPic.jpg";
+import UserPic from "../images/userImages/userPic.jpg";
 
 
 class FeedBacks2Rows extends React.Component {

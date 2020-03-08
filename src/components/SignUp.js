@@ -1,5 +1,5 @@
 import React from "react";
-import MainBackGroundImage from "../images/742079-PSISLA-798.png";
+import MainBackGroundImage from "../images/background/742079-PSISLA-798.png";
 
 class SignUp extends React.Component {
     render() {
@@ -10,7 +10,6 @@ class SignUp extends React.Component {
                     <p className={"redText"}>Registration</p>
                     <p className={"greyText"}>Type your data and hit Y'alla!</p>
                     <div className={"loginInputContainer"}>
-
                         <input className={'inputShape'} type="text" id={"name"} placeholder={" Name"}/>
                         <input className={'inputShape'} type="text" id={"password"} placeholder={" Lastname"}/>
                         <input className={'inputShape'} type="text" id={"email"} placeholder={" E-mail"}/>

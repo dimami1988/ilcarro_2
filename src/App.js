@@ -20,38 +20,47 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isShowSignUp: false
+            isShowSignUp: false,
+            isShowLogin: false,
+            isShowSearchWithoutRegistration: true
+
         };
 
     }
     showSignUp= (isShowSignUp)=>{
-        this.setState({isShowSignUp:true})
-    //    #join_footer_button
+        this.setState({isShowSignUp:"true"})
     };
 
+    showLogin= (isShowLogin)=>{
+        this.setState({isShowLogin:true})
+    };
 
-
-
-
-
-
-
+    showSearchWithoutRegistration=(isShowSearchWithoutRegistration)=>(
+      this.setState({isShowSearchWithoutRegistration:true})
+    );
 
    render() {
-        if (this.state.isShowSignUp) {
-            return this.renderSignUp();
-        } else {
-            return this.renderMain();
+        // if (this.state.isShowSignUp) {
+        //     return this.renderSignUp();
+        // } else if (this.state.isShowLogin){
+        //     return this.renderLogin();} else
+        if(this.state.isShowSearchWithoutRegistration){
+            return this.renderWithoutRegistration();
         }
+        else {
+            return this.renderFindYourCar();
+        }
+
+
     }
 
-    renderMain() {
+    renderFindYourCar() {
         return (
             <div className={'wrapper'}>
-                <MainHeader showSignUp={this.showSignUp}/>
-                <DatePicker1/>
-                <FindYourCarBlock showSignUp={this.showSignUp}/>
-                <Section1Footer/>
+                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}/>
+
+                <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration} />
+                <Section1Footer showSignUp={this.showSignUp}/>
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
@@ -63,22 +72,48 @@ class App extends React.Component {
     }
 
 
-  renderSignUp() {
+    renderLogin() {
     return (
         <div className={'wrapper'}>
-                  <MainHeader showSignUp={this.showSignUp}/>
+            <MainHeader showSignUp={this.showLogin} showLogin={this.showLogin}/>
             <DatePicker1/>
             <SignUp/>
-            <Section1Footer/>
+            <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}/>
             <MostPopular/>
             <Section2MainBlock/>
             <FeedBacks2Rows/>
             <Section2Footer/>
             <LoginForm/>
-            <SearchWithoutRegistrationBlock/>
+
         </div>
 
     )
   }
+
+    renderSignUp() {
+        return (
+            <div className={'wrapper'}>
+                <MainHeader showSignUp={this.showSignUp}/>
+                <DatePicker1/>
+                <LoginForm/>
+                <Section1Footer showSignUp={this.showSignUp}/>
+                <MostPopular/>
+                <Section2MainBlock/>
+                <FeedBacks2Rows/>
+                <Section2Footer/>
+                <SearchWithoutRegistrationBlock/>
+            </div>
+
+        )
+    }
+    renderWithoutRegistration(){
+       return (
+           <div>
+               <MainHeader showSignUp={this.showSignUp} />
+               <SearchWithoutRegistrationBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
+               <Section2Footer/>
+           </div>
+       )
+    }
 }
 export default App;

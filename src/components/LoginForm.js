@@ -1,5 +1,5 @@
 import React from "react";
-import MainBackGroundImage from "../images/742079-PSISLA-798.png";
+import MainBackGroundImage from "../images/background/742079-PSISLA-798.png";
 
 class LoginForm extends React.Component {
     render() {

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../images/component.png";
+import Logo from "../images/logo/component.png";
 import Facebook from "../images/socialNets/facebookWhite.png";
 import Telegram from "../images/socialNets/telegramWhite.png";
 import VK from "../images/socialNets/vkWhite.png";

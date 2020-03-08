@@ -1,7 +1,7 @@
 import React from "react";
-import Vehicle1 from "../images/zaz.png";
-import Vehicle2 from "../images/gaz.png";
-import Vehicle3 from "../images/azlk.png";
+import Vehicle1 from "../images/diagonalImages/zaz.png";
+import Vehicle2 from "../images/diagonalImages/gaz.png";
+import Vehicle3 from "../images/diagonalImages/azlk.png";
 const root = document.getElementById('root');
 
 class Section2MainBlock extends React.Component{
@@ -12,7 +12,7 @@ class Section2MainBlock extends React.Component{
     render() {
         return(
                 <div className={"blueBackGround"} >
-                    <div className={"redBackGround"} >
+                    <div className={"redBackGround "} >
 
                         <div className={"inlineBlock vehicle1"}>
                             <img  className={"imageSizing"} src={Vehicle1} alt={'vehicle'} />
@@ -24,7 +24,7 @@ class Section2MainBlock extends React.Component{
                             </div>
                         </div>
 
-                        <div className={"inlineBlock"}> <img className={"imageSizing"} src={Vehicle2} alt={'vehicle'} />
+                        <div className={"inlineBlock "}> <img className={"imageSizing"} src={Vehicle2} alt={'vehicle'} />
                             <p className={"vehicleName2 vehicleName"}>BLACKSTAR</p>
                             <div className={"whitePriceBox"}>
                                 <p className={"dollarSign"}>$</p>
@@ -32,7 +32,7 @@ class Section2MainBlock extends React.Component{
                                 <p className={"perDay"}>PER DAY</p>
                             </div>
                         </div>
-                        <div className={"inlineBlock vehicle3 "}><img className={"imageSizing "} src={Vehicle3} alt={'vehicle'} />
+                        <div className={"inlineBlock vehicle3"}><img className={"imageSizing "} src={Vehicle3} alt={'vehicle'} />
                             <p className={"vehicleName3 vehicleName"}>PNEUMODADDY</p>
                             <div className={"whitePriceBox"}>
                                 <div className={"dollarBox"}>

@@ -1,12 +1,10 @@
 import React from "react";
 import './Footers.css';
 
-function Section1Footer() {
+class Section1Footer extends React.Component{
+    render () {
     return (
-        // <div className="footer1"><img
-        //     src="../images/redline.svg" alt="За стеклом"/>
-        //     <div className="footer_redline"></div>
-        <div className="footer1">y
+        <div className="footer1">
             <div className="footer_block">
                 <div className="footer_redline">
                     <div className="footer_text1">
@@ -21,13 +19,14 @@ function Section1Footer() {
                     </div>
                     <div className="footer_text3">
                         <p className="text3">Affordable prices Guaranteed cars</p>
-                        <button id="join_footer_button" className="footer_button">Join now!</button>
+                        <button id="join_footer_button" className={this.isShowSignUp?'hidden':'footer_button' }>Join now!</button>
                     </div>
                 </div>
             </div>
 
         </div>
-    );
+    )
+    }
 }
 
 export default Section1Footer;
