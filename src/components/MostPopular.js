@@ -1,20 +1,27 @@
 import React from "react";
-
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 
 class MostPopular extends React.Component{
     render() {
-        return(
-
-                <div className={"section2Wrapper"}>
-                    <p className={"redNumber marginTop"}>3</p>
-                    <p className={"blueBigText marginTop"}>MOST POPULAR<br/>CHOICES IN YOUR AREA</p>
-                    <p className={"smallBlueText marginTop"}>Candy canes topping dessert jelly beans pie jelly beans sweet roll.
-                        Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll
-                        cake cookie gingerbread. Icing wafer pie pudding ice cream bonbon halvah bonbon topping. Donut halvah
+        return (
+            <Container>
+                <Row>
+                    <Col sm={1} ><p className={"redNumber marginTop"}>3</p></Col>
+                    <Col sm={2}><p className={"blueBigText marginTop"}>MOST POPULAR<br/>CHOICES IN YOUR AREA</p></Col>
+                    <Col sm={9}><p className={"smallBlueText marginTop"}>Candy canes topping dessert jelly beans pie jelly
+                        beans sweet roll.
+                        Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie
+                        roll
+                        cake cookie gingerbread. Icing wafer pie pudding ice cream bonbon halvah bonbon topping. Donut
+                        halvah
                         tiramisu bear claw tart.</p>
-                </div>
-        )  }
+                    </Col>
+                    </Row>
+            </Container>
+    )  }
 
-}
-export default MostPopular;
+    }
+    export default MostPopular;

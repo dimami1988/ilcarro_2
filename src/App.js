@@ -4,7 +4,6 @@ import FindYourCarBlock from "./components/FindYourCarBlock";
 import Section2MainBlock from "./components/Section2MainBlock";
 import FeedBacks2Rows from "./components/FeedBacks2Rows";
 import SignUp from "./components/SignUp";
-//import Data from "./components/Data";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MostPopular from "./components/MostPopular";
 import LoginForm from "./components/LoginForm";
@@ -15,39 +14,41 @@ import Section2Footer from "./components/section2Footer";
 import './App.css';
 import './Footers.css';
 
-
 class App extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            isShowSignUp: false,
-            isShowLogin: false,
-            isShowSearchWithoutRegistration: true
-
+          whichButtonPressed : "home"
         };
-
     }
-    showSignUp= (isShowSignUp)=>{
-        this.setState({isShowSignUp:"true"})
+
+    showSignUp= (whichButtonPressed)=>{
+        this.setState({whichButtonPressed:"registration"})
     };
 
-    showLogin= (isShowLogin)=>{
-        this.setState({isShowLogin:true})
+    showLogin= (whichButtonPressed)=>{
+        this.setState({whichButtonPressed:"login"})
     };
 
-    showSearchWithoutRegistration=(isShowSearchWithoutRegistration)=>(
-      this.setState({isShowSearchWithoutRegistration:true})
+    showSearchWithoutRegistration=(whichButtonPressed)=>(
+      this.setState({whichButtonPressed:"searchUnReg"})
+    );
+
+    showFindYourCar=(whichButtonPressed)=>(
+        this.setState({whichButtonPressed: "home"})
     );
 
    render() {
-        // if (this.state.isShowSignUp) {
-        //     return this.renderSignUp();
-        // } else if (this.state.isShowLogin){
-        //     return this.renderLogin();} else
-        if(this.state.isShowSearchWithoutRegistration){
+        if (this.state.whichButtonPressed==="registration") {
+            return this.renderSignUp();
+        } else if (this.state.whichButtonPressed==="login"){
+            return this.renderLogin();
+        } else if(this.state.whichButtonPressed==="searchUnReg"){
             return this.renderWithoutRegistration();
-        }
-        else {
+        } else if(this.state.whichButtonPressed==="home") {
+            return this.renderFindYourCar();
+        }else {
             return this.renderFindYourCar();
         }
 
@@ -56,56 +57,49 @@ class App extends React.Component {
 
     renderFindYourCar() {
         return (
-            <div className={'wrapper'}>
-                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}/>
-
+            <div>
+                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin} showFindYourCar={this.showFindYourCar}/>
                 <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration} />
                 <Section1Footer showSignUp={this.showSignUp}/>
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
                 <Section2Footer/>
-                <SearchWithoutRegistrationBlock/>
             </div>
 
         )
     }
 
-
     renderLogin() {
     return (
-        <div className={'wrapper'}>
-            <MainHeader showSignUp={this.showLogin} showLogin={this.showLogin}/>
+        <div>
+            <MainHeader  showSignUp={this.showSignUp}/>
             <DatePicker1/>
-            <SignUp/>
+            <LoginForm/>
             <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}/>
             <MostPopular/>
             <Section2MainBlock/>
             <FeedBacks2Rows/>
             <Section2Footer/>
-            <LoginForm/>
-
         </div>
-
     )
   }
 
     renderSignUp() {
         return (
-            <div className={'wrapper'}>
-                <MainHeader showSignUp={this.showSignUp}/>
+            <div>
+                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}/>
                 <DatePicker1/>
-                <LoginForm/>
+                <SignUp/>
                 <Section1Footer showSignUp={this.showSignUp}/>
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
                 <Section2Footer/>
-                <SearchWithoutRegistrationBlock/>
             </div>
-
         )
     }
+
     renderWithoutRegistration(){
        return (
            <div>

@@ -8,8 +8,6 @@ import Row from 'react-bootstrap/Row';
 class SearchWithoutRegistrationBlock extends React.Component {
     render() {
         return (
-
-
                 <Container>
                     <Row>
                         <Col sm={6} className={'searchWithoutRegContainer'}>

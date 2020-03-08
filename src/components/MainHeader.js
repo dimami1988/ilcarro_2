@@ -9,8 +9,8 @@ class MainHeader extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isShowSignUp: false,
-            isShowLogin: false
+            whichButtonPressed: "home"
+
         };
     }
 
@@ -21,7 +21,7 @@ class MainHeader extends React.Component {
                 <Container>
                     <Row>
                         <Col sm={6} >
-                            <img src={Logo} alt={'logo'}/>
+                            <img src={Logo} alt={'logo'} onClick={()=>{this.props.showFindYourCar(this.state.whichButtonPressed)}}/>
                         </Col>
 
                         <Col sm={6}>
@@ -29,14 +29,12 @@ class MainHeader extends React.Component {
                                 <p className={'navigationText'}>Search</p>
                                 <p className={'navigationText'}>Let the car work</p>
                                 <p className={'navigationText'}>Terms of use</p>
-                                <p onClick={() => {
-                                    this.props.showSignUp(this.state.isShowSignUp)
-                                }} className={this.props.isShowSignUp ? 'hidden' : 'navigationText'}>Sign up</p>
-                                <p onClick={() => {
-                                    this.props.showLogin(this.state.isShowLogin)
+                                <p onClick={() => {this.props.showSignUp(this.state.whichButtonPressed)}} className={(this.props.whichButtonPressed==="login") ? 'hidden' : 'navigationText'}>Sign up</p>
+                                <p onClick={() => {this.props.showLogin(this.state.whichButtonPressed)
                                 }} className={'navigationText'}>Login</p>
                             </nav>
                         </Col>
+
                     </Row>
                 </Container>
             </div>
