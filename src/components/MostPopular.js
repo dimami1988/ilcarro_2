@@ -14,9 +14,8 @@ class MostPopular extends React.Component{
                     <Col sm={9}><p className={"smallBlueText marginTop"}>Candy canes topping dessert jelly beans pie jelly
                         beans sweet roll.
                         Toffee cotton candy cake chocolate cake. Bonbon gummi bears jelly-o bonbon fruitcake tootsie
-                        roll
-                        cake cookie gingerbread. Icing wafer pie pudding ice cream bonbon halvah bonbon topping. Donut
-                        halvah tiramisu bear claw tart.</p>
+                        roll cake cookie gingerbread. Icing wafer pie pudding ice cream bonbon halvah bonbon topping.
+                        Donut halvah tiramisu bear claw tart.</p>
                     </Col>
                     </Row>
             </Container>

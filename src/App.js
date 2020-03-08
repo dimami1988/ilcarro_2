@@ -75,7 +75,7 @@ class App extends React.Component {
     renderLogin() {
     return (
         <div>
-            <MainHeader  showSignUp={this.showSignUp}/>
+            <MainHeader  showSignUp={this.showSignUp} />
             <DatePicker1/>
             <LoginForm/>
             <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}/>
