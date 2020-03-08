@@ -1,5 +1,5 @@
 import React from "react";
-import './Footers.css';
+import '../Footers.css';
 
 class Section1Footer extends React.Component {
     state = {
