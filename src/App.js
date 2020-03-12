@@ -14,101 +14,130 @@ import Section2Footer from "./components/section2Footer";
 import './App.css';
 import './Footers.css';
 import Component1 from "./components/Component";
+import RedButton from "./components/RebButton";
+
+
+const navigationMapping = {};
+
+const registerPage = (key,renderer) => {
+  navigationMapping[key] = renderer;
+};
 
 class App extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-          whichButtonPressed : "home"
+          currentPage : "login"
         };
+
+        registerPage("registration",this.renderSignUp);
+        registerPage("home",this.renderWithoutRegistration);
+        registerPage("login",this.renderLogin);
+        registerPage("searchUnReg",this.renderFindYourCar);
     }
 
-    showSignUp= (whichButtonPressed)=>{
-        this.setState({whichButtonPressed:"registration"})
+
+
+    showSignUp= async () => {
+      // EXAMPLE OF NETWORK REQUEST
+      // try {
+      //   // key word — "await"
+      //   const response = await fetch('https://ya.ru');
+        this.setState({
+          currentPage:"registration",
+          // data: response
+        });
+      //
+      // } catch (error) {
+      //
+      // }
     };
 
-    showLogin= (whichButtonPressed)=>{
-        this.setState({whichButtonPressed:"login"})
+    showLogin= () => {
+        this.setState({currentPage:"login"})
     };
 
-    showSearchWithoutRegistration=(whichButtonPressed)=>(
-      this.setState({whichButtonPressed:"searchUnReg"})
+    showSearchWithoutRegistration=()=>(
+      this.setState({currentPage:"searchUnReg"})
     );
 
-    showFindYourCar=(whichButtonPressed)=>(
-        this.setState({whichButtonPressed: "home"})
+    showFindYourCar=()=>(
+        this.setState({currentPage: "home"})
     );
+
+    getRenderer(key) {
+        const callback = navigationMapping[key]
+        if (!callback) {
+          return this.render404;
+        }
+        return callback;
+    }
+
 
    render() {
-        if (this.state.whichButtonPressed==="registration") {
-            return this.renderSignUp();
-        } else if (this.state.whichButtonPressed==="login"){
-            return this.renderLogin();
-        } else if(this.state.whichButtonPressed==="searchUnReg"){
-            return this.renderWithoutRegistration();
-        } else if(this.state.whichButtonPressed==="home") {
-            return this.renderFindYourCar();
-        }else {
-            return this.renderFindYourCar();
-        }
-
-
-    }
-
-    renderFindYourCar() {
         return (
-            <div>
-                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin} showFindYourCar={this.showFindYourCar}/>
-                <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration} />
-                <Section1Footer showSignUp={this.showSignUp}/>
-                <MostPopular/>
-                <Section2MainBlock/>
-                <FeedBacks2Rows/>
-                <Section2Footer/>
-                {/*<Component1></Component1>*/}
-            </div>
+          <div>
+              <MainHeader
+                whichButtonPressed={this.state.currentPage}
+                showSignUp={this.showSignUp}
+                showLogin={this.showLogin}
+                showFindYourCar={this.showFindYourCar}
+              />
+              {this.getRenderer(this.state.currentPage)()}
 
-        )
+              {this.state.currentPage === 'home'
+                ? null
+                : <>
+                    <MostPopular/>
+                    <Section2MainBlock/>
+                    <FeedBacks2Rows/>
+                  </>
+              }
+              <Section2Footer/>
+          </div>
+      )
     }
 
-    renderLogin() {
-    return (
-        <div>
-            <MainHeader  showSignUp={this.showSignUp} />
+    render404 = () => {
+       return <h1>Page not found</h1>
+    }
+
+    renderFindYourCar = () => {
+        return <>
+                <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration} />
+                <Section1Footer>
+                <RedButton action={ this.showSignUp }>
+                  JoinUs
+                </RedButton>
+                </Section1Footer>
+        </>
+    }
+
+    renderLogin = () => {
+    return <>
             <DatePicker1/>
             <LoginForm/>
-            <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}/>
-            <MostPopular/>
-            <Section2MainBlock/>
-            <FeedBacks2Rows/>
-            <Section2Footer/>
-        </div>
-    )
+            <Section1Footer>
+              <RedButton action={ this.showSignUp }>
+                JoinUs
+              </RedButton>
+            </Section1Footer>
+    </>
   }
 
-    renderSignUp() {
-        return (
-            <div>
-                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}/>
+    renderSignUp = () => {
+        return <>
                 <DatePicker1/>
                 <SignUp/>
-                <Section1Footer showSignUp={this.showSignUp}/>
-                <MostPopular/>
-                <Section2MainBlock/>
-                <FeedBacks2Rows/>
-                <Section2Footer/>
-            </div>
-        )
+                <Section1Footer>
+                </Section1Footer>
+        </>
     }
 
-    renderWithoutRegistration(){
+    renderWithoutRegistration = () => {
        return (
-           <div>
-               <MainHeader showSignUp={this.showSignUp} />
                <SearchWithoutRegistrationBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
-               <Section2Footer/>
-           </div>
        )
     }
 }
