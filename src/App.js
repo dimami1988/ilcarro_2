@@ -61,7 +61,7 @@ class App extends React.Component {
             <div>
                 <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin} showFindYourCar={this.showFindYourCar}/>
                 <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration} />
-                <Section1Footer showSignUp={this.showSignUp}/>
+                <Section1Footer showSignUp={this.showSignUp} whichButtonPressed={this.state.whichButtonPressed}/>
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
@@ -78,7 +78,7 @@ class App extends React.Component {
             <MainHeader  showSignUp={this.showSignUp} />
             <DatePicker1/>
             <LoginForm/>
-            <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}/>
+            <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin} whichButtonPressed={this.state.whichButtonPressed}/>
             <MostPopular/>
             <Section2MainBlock/>
             <FeedBacks2Rows/>
@@ -93,7 +93,7 @@ class App extends React.Component {
                 <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}/>
                 <DatePicker1/>
                 <SignUp/>
-                <Section1Footer showSignUp={this.showSignUp}/>
+                <Section1Footer showSignUp={this.showSignUp} whichButtonPressed={this.state.whichButtonPressed}/>
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>

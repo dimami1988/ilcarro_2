@@ -4,40 +4,44 @@ import Facebook from "../images/socialNets/facebookWhite.png";
 import Telegram from "../images/socialNets/telegramWhite.png";
 import VK from "../images/socialNets/vkWhite.png";
 import Instagram from "../images/socialNets/instagramWhite.png";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 
 function Section2Footer() {
 
     return (
-        // <div className="footer1"><img
-        //     src="../images/redline.svg" alt="За стеклом"/>
-        //     <div className="footer_redline"></div>
-        <div className="footer1">
-            <div className="footer2_beginning">
-                <div className="footer2_text1">
+
+        <Container fluid={'true'} className="footer2">
+            <Row sm={12} className="footer2_beginning">
+                <Col sm={4} className="footer2_text1">
                     <p>Candy canes topping dessert jelly beans pie jelly beans sweet roll.
                         Toffee cotton candy cake chocolate cake.
                         Bonbon gummi bears jelly-o bonbon fruitcake tootsie roll cake
                         cookie gingerbread. Icing wafer pie pudding ice cream bonbon halvah
                         bonbon topping. Donut halvah tiramisu bear claw tart.
                     </p>
-                </div>
-                <div className="logo">
+                </Col>
+                <Col sm={4} className="logo">
                     <img src={Logo} alt="logo"/>
-                </div>
-                <div className="socialNetBlock">
+                </Col>
+                <Col sm={4} className="socialNetBlock">
                     <div className="socialNets"><img className="socialNetsPic" src={Facebook} alt="facebook"/></div>
                     <div className="socialNets"><img className="socialNetsPic" src={Telegram} alt="telegram"/></div>
                     <div className="socialNets"><img className="socialNetsPic" src={VK} alt="vk"/></div>
                     <div className="socialNets"><img className="socialNetsPic" src={Instagram} alt="instagram"/></div>
                     <div className="socialNets End"><p className="socialNetsPic">⌗</p></div>
-                </div>
-            </div>
-            <div className="footer2_flex">
-                <div className="footer2_redline">
-                    <p className="footer2_redtext">The ultimate car rental service</p>
-                </div>
-                <div>
+                </Col>
+            </Row>
+            <Row sm={12} className="footer2_flex">
+                <Col sm={6} className="footer2_redline">
+                    <div>
+                        <p className="footer2_redtext1">THE ULTIMATE</p>
+                        <p className="footer2_redtext2">CAR RENTAL SERVICE</p>
+                    </div>
+                </Col>
+                <Col sm={6}>
                     <div className='NavigationTextBlockFooter2'>
                         <p className='navigationText'>Search</p>
                         <p className='navigationText'>Let the car work</p>
@@ -67,11 +71,11 @@ function Section2Footer() {
                         </div>
 
                     </div>
-                </div>
+                </Col>
 
-            </div>
+            </Row>
 
-        </div>
+        </Container>
     );
 }
 
