@@ -10,11 +10,12 @@ import LoginForm from "./components/LoginForm";
 import DatePicker1 from "react-datepicker/es";
 import SearchWithoutRegistrationBlock from "./components/SearchWithoutRegistration";
 import Section1Footer from "./components/section1Footer";
-import Section2Footer from "./components/section2Footer";
+import Footer from "./components/Footer";
 import './App.css';
 import './Footers.css';
 import Component1 from "./components/Component";
-import RedButton from "./components/RebButton";
+import NavMenu from "./components/NavMenu";
+import RedButton from "./components/RedButton";
 
 
 const navigationMapping = {};
@@ -28,7 +29,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          currentPage : "login"
+          currentPage : "home"
         };
 
         registerPage("registration",this.renderSignUp);
@@ -84,6 +85,9 @@ class App extends React.Component {
                 showLogin={this.showLogin}
                 showFindYourCar={this.showFindYourCar}
               />
+
+
+
               {this.getRenderer(this.state.currentPage)()}
 
               {this.state.currentPage === 'home'
@@ -94,7 +98,11 @@ class App extends React.Component {
                     <FeedBacks2Rows/>
                   </>
               }
-              <Section2Footer/>
+
+              <Footer>
+              <NavMenu>
+              </NavMenu>
+              </Footer>
           </div>
       )
     }
@@ -107,9 +115,9 @@ class App extends React.Component {
         return <>
                 <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration} />
                 <Section1Footer>
-                <RedButton action={ this.showSignUp }>
-                  JoinUs
-                </RedButton>
+                  <RedButton action={ this.showSignUp }>
+                    JoinUs
+                  </RedButton>
                 </Section1Footer>
         </>
     }
