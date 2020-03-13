@@ -14,6 +14,7 @@ import Section2Footer from "./components/section2Footer";
 import './App.css';
 import './Footers.css';
 import Component1 from "./components/Component";
+import NavBar from "./components/NavBar";
 
 class App extends React.Component {
 
@@ -65,7 +66,9 @@ class App extends React.Component {
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
-                <Section2Footer/>
+                <Section2Footer>
+                    <NavBar/>
+                </Section2Footer>
                 {/*<Component1></Component1>*/}
             </div>
 
@@ -107,7 +110,9 @@ class App extends React.Component {
            <div>
                <MainHeader showSignUp={this.showSignUp} />
                <SearchWithoutRegistrationBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
-               <Section2Footer/>
+               <Section2Footer>
+                   <NavBar/>
+               </Section2Footer>
            </div>
        )
     }

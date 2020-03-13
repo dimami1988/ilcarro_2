@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 
-function Section2Footer() {
+function Section2Footer(props) {
 
     return (
 
@@ -42,13 +42,7 @@ function Section2Footer() {
                     </div>
                 </Col>
                 <Col sm={6}>
-                    <Row sm={6} className='NavigationTextBlockFooter2'>
-                        <p className='navigationText'>Search</p>
-                        <p className='navigationText'>Let the car work</p>
-                        <p className='navigationText'>Terms of use</p>
-                        <p className='navigationText'>Sign up</p>
-                        <p className='navigationText'>Log in</p>
-                    </Row>
+                    { props.children }
                     <Row>
                         <p className='whiteLine'>__________________________________________________________________________________________________________</p>
                     </Row>
