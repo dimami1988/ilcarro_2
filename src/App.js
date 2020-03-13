@@ -15,42 +15,43 @@ import './App.css';
 import './Footers.css';
 import Component1 from "./components/Component";
 import NavBar from "./components/NavBar";
+import RedButton from "./components/RedButton";
 
 class App extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-          whichButtonPressed : "home"
+            whichButtonPressed: "home"
         };
     }
 
-    showSignUp= (whichButtonPressed)=>{
-        this.setState({whichButtonPressed:"registration"})
+    showSignUp = (whichButtonPressed) => {
+        this.setState({whichButtonPressed: "registration"})
     };
 
-    showLogin= (whichButtonPressed)=>{
-        this.setState({whichButtonPressed:"login"})
+    showLogin = (whichButtonPressed) => {
+        this.setState({whichButtonPressed: "login"})
     };
 
-    showSearchWithoutRegistration=(whichButtonPressed)=>(
-      this.setState({whichButtonPressed:"searchUnReg"})
+    showSearchWithoutRegistration = (whichButtonPressed) => (
+        this.setState({whichButtonPressed: "searchUnReg"})
     );
 
-    showFindYourCar=(whichButtonPressed)=>(
+    showFindYourCar = (whichButtonPressed) => (
         this.setState({whichButtonPressed: "home"})
     );
 
-   render() {
-        if (this.state.whichButtonPressed==="registration") {
+    render() {
+        if (this.state.whichButtonPressed === "registration") {
             return this.renderSignUp();
-        } else if (this.state.whichButtonPressed==="login"){
+        } else if (this.state.whichButtonPressed === "login") {
             return this.renderLogin();
-        } else if(this.state.whichButtonPressed==="searchUnReg"){
+        } else if (this.state.whichButtonPressed === "searchUnReg") {
             return this.renderWithoutRegistration();
-        } else if(this.state.whichButtonPressed==="home") {
+        } else if (this.state.whichButtonPressed === "home") {
             return this.renderFindYourCar();
-        }else {
+        } else {
             return this.renderFindYourCar();
         }
 
@@ -60,9 +61,14 @@ class App extends React.Component {
     renderFindYourCar() {
         return (
             <div>
-                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin} showFindYourCar={this.showFindYourCar}/>
-                <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration} />
-                <Section1Footer showSignUp={this.showSignUp} whichButtonPressed={this.state.whichButtonPressed}/>
+                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}
+                            showFindYourCar={this.showFindYourCar}/>
+                <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
+                <Section1Footer>
+                    <RedButton action={this.showSignUp}>Join Us</RedButton>
+                     {/*там где кнопка не нужна, я просто не пишу строку выше*/}
+                </Section1Footer>
+                {/*<Section1Footer showSignUp={this.showSignUp} whichButtonPressed={this.state.whichButtonPressed}/>*/}
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
@@ -76,19 +82,20 @@ class App extends React.Component {
     }
 
     renderLogin() {
-    return (
-        <div>
-            <MainHeader  showSignUp={this.showSignUp} />
-            <DatePicker1/>
-            <LoginForm/>
-            <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin} whichButtonPressed={this.state.whichButtonPressed}/>
-            <MostPopular/>
-            <Section2MainBlock/>
-            <FeedBacks2Rows/>
-            <Section2Footer/>
-        </div>
-    )
-  }
+        return (
+            <div>
+                <MainHeader showSignUp={this.showSignUp}/>
+                <DatePicker1/>
+                <LoginForm/>
+                <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}
+                                whichButtonPressed={this.state.whichButtonPressed}/>
+                <MostPopular/>
+                <Section2MainBlock/>
+                <FeedBacks2Rows/>
+                <Section2Footer/>
+            </div>
+        )
+    }
 
     renderSignUp() {
         return (
@@ -105,16 +112,17 @@ class App extends React.Component {
         )
     }
 
-    renderWithoutRegistration(){
-       return (
-           <div>
-               <MainHeader showSignUp={this.showSignUp} />
-               <SearchWithoutRegistrationBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
-               <Section2Footer>
-                   <NavBar/>
-               </Section2Footer>
-           </div>
-       )
+    renderWithoutRegistration() {
+        return (
+            <div>
+                <MainHeader showSignUp={this.showSignUp}/>
+                <SearchWithoutRegistrationBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
+                <Section2Footer>
+                    <NavBar/>
+                </Section2Footer>
+            </div>
+        )
     }
 }
+
 export default App;
