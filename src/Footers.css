@@ -123,6 +123,7 @@
     padding: 1.5em 0em 0em 4em;
 }
 
+
 .socialNetBlock {
     display: inline-flex;
     /*top: 2854px;*/
@@ -135,6 +136,16 @@
     color: #FFFFFF;
     opacity: 1;
     /*padding: 0.5em 0em 0em 0em;*/
+}
+
+.socialNetsPic {
+    display: inline-block;
+    /*top: 2854px;*/
+    /*left: 1496px;*/
+    width: 10px;
+    height: 10px;
+    /*margin-left: 27em;*/
+    /*margin-top: -5em;*/
 }
 
 .socialNets {
@@ -170,10 +181,10 @@
 }
 
 .footer2_flex {
-    /*width: 50%;*/
-    /*display: inline-flex;*/
-    /*height: 10%;*/
-}
+     /*width: 50%;*/
+     /*display: inline-flex;*/
+     /*height: 10%;*/
+ }
 
 .footer2_redline {
     /*margin: -3.75em 0em 7em 0em;*/
@@ -216,8 +227,6 @@
     margin: 0em 0em 0em 3em;
 }
 
-
-
 .navigationText {
     /*top: 33px;*/
     /*left: 1432px;*/
@@ -238,31 +247,14 @@
     /*margin-left: 33em;*/
     text-align: right;
     width: 90%;
-
     /*margin: -1em 2.7em 0em 0em;*/
-
     /*font: Bold 19px/12px Raleway;*/
     display: inline-flex;
 }
 
-.socialNetsPic {
-    display: inline-block;
-    /*top: 2854px;*/
-    /*left: 1496px;*/
-    width: 10px;
-    height: 10px;
-    /*margin-left: 27em;*/
-    /*margin-top: -5em;*/
+.whiteLine {
+    color: #FFFFFF;
 }
-
-.socialNetBlock {
-    display: inline-block;
-    margin: 0em 0em 0em 0em;
-}
-
-
-
-
 
 
 .three_elem {
@@ -296,7 +288,23 @@
     width: 10em;
     font: Bold 8px/0px Raleway;
     color: darkgrey;
+}
 
+.phone {
+    text-align: right;
+    font: Bold 74px/54px Bebas Neue;
+    letter-spacing: 0;
+    color: #EA2340;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.address {
+    text-align: right;
+    font: Bold 16px/24px Raleway;
+    letter-spacing: 0;
+    color: green;
+    opacity: 1;
 }
 
 .hidden{

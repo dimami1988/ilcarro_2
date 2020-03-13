@@ -42,15 +42,18 @@ function Section2Footer() {
                     </div>
                 </Col>
                 <Col sm={6}>
-                    <div className='NavigationTextBlockFooter2'>
+                    <Row sm={6} className='NavigationTextBlockFooter2'>
                         <p className='navigationText'>Search</p>
                         <p className='navigationText'>Let the car work</p>
                         <p className='navigationText'>Terms of use</p>
                         <p className='navigationText'>Sign up</p>
                         <p className='navigationText'>Log in</p>
-                    </div>
-                    <div>
-                        <div className="three_elem">
+                    </Row>
+                    <Row>
+                        <p className='whiteLine'>__________________________________________________________________________________________________________</p>
+                    </Row>
+                    <Row>
+                        <Col sm={2} className="three_elem">
                             <p className="footer2_cities">TOP CITIES</p>
                             <div className="wrapper_all_cities">
                                 <div className="footer2_cities1">
@@ -60,21 +63,30 @@ function Section2Footer() {
                                     <p>London</p>
                                     <p>Los Angeles</p>
                                 </div>
-                                <div className="footer2_cities2">
-                                    <p>Vienna</p>
-                                    <p>Moscow</p>
-                                    <p>Warsaw</p>
-                                    <p>Berlin</p>
-                                    <p>Seattle</p>
-                                </div>
                             </div>
-                        </div>
-
-                    </div>
+                        </Col>
+                        <Col className="footer2_cities2">
+                            <div>
+                                <p>Vienna</p>
+                                <p>Moscow</p>
+                                <p>Warsaw</p>
+                                <p>Berlin</p>
+                                <p>Seattle</p>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Col sm={5}>
+                        <Row>
+                            <p className='phone'>
+                                08-616-8800-55
+                            </p>
+                        </Row>
+                        <Row>
+                            <p className='address'>1600 Amphitheatre Pkwy Mountain View, CA 94043, USA</p>
+                        </Row>
+                    </Col>
                 </Col>
-
             </Row>
-
         </Container>
     );
 }
