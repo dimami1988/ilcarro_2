@@ -66,7 +66,6 @@ class App extends React.Component {
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
                 <Section2Footer/>
-                {/*<Component1></Component1>*/}
             </div>
 
         )
@@ -78,7 +77,7 @@ class App extends React.Component {
             <MainHeader  showSignUp={this.showSignUp} />
             <DatePicker1/>
             <LoginForm/>
-            <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}/>
+            <Section1Footer showSignUp={this.showSignUp} showLogin={this.showLogin}/>
             <MostPopular/>
             <Section2MainBlock/>
             <FeedBacks2Rows/>

@@ -124,22 +124,22 @@
     clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
 }
 .redNumber{
-    font: Bold 130px/130px Bebas Neue;
+    font: Bold 100px/100px Bebas Neue;
     letter-spacing: 0;
     color: #EA2340;
     margin-right: 40px;
     margin-bottom: 0;
+    margin-left: 40px;
 }
 
 .blueBigText{
     width: 13em;
     text-align: left;
-    font: Bold 54px/54px Bebas Neue;
+    font: Bold 44px/44px Bebas Neue;
     letter-spacing: 0;
     color: #062639;
     text-transform: capitalize;
-    display: inline-block;
-    margin-right: 1em;
+    margin-right: 2em;
     margin-top: 2em;
 
 }
@@ -147,10 +147,10 @@
 .smallBlueText{
     width: 641px;
     text-align: left;
-    font: Bold 16px/24px Raleway;
+    font: Bold 12px/20px Raleway;
     letter-spacing: 0;
     color: #062639;
-    display: inline-block;
+    /*margin-left: ;*/
 }
 
 
@@ -405,8 +405,8 @@
 
 /*Registration without container*/
 .registrationPhotoContainer{
-    width: 526px;
-    height: 358px;
+    width: 506px;
+    height: 338px;
 }
 
 .searchWithoutRegContainer{
