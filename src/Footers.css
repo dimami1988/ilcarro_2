@@ -13,172 +13,153 @@
 }
 
 .footer_text1 {
-    top: 921px;
-    left: 184px;
-
-    height: 2em;
+    width: 70%;
+    /*height: 2%;*/
     text-align: left;
     font: Bold 25px/30px Bebas Neue;
-    letter-spacing: 0;
+
     color: #FFFFFF;
     text-transform: capitalize;
-    opacity: 1;
-    display: inline-block;
-    margin: 2.5em 0.5em 1em 4em;
+    padding: 0em 0em 0em 6em;
+
 }
 
 .footer_text2 {
-    top: 927px;
-    left: 561px;
-    width: 38em;
-    height: 2em;
-    text-align: left;
+
+    width: 65%;
+    height: 2%;
+    /*text-align: left;*/
     /*!*font: Regular 16px/24px Raleway;*! почему ошибка*/
     font: bold 8px/14px Raleway;
-    letter-spacing: 0;
     color: #FFFFFF;
-    opacity: 1;
-    display: inline-block;
-    margin: 4em 0em 0em 3em;
+    /*display: inline-block;*/
+    margin: 0em 0em 0em 0em;
 }
 
 .footer_text3 {
     /*padding-top: 30px;*/
     /*top: 908px;*/
     /*left: 1365px;*/
-    width: 9em;
-    height: 0em;
-    text-align: left;
+    width: 35%;
+    height: 2%;
+    /*text-align: left;*/
     font: Bold 22px/24px Raleway;
     /*letter-spacing: 0;*/
     color: #EA2340;
-    opacity: 1;
-    display: inline-block;
-    margin: 1.5em 0em 0em 4em;
+    /*display: inline-block;*/
+    margin: 0em 0em 0em 0em;
 }
 
 .footer_button{
-    top: 492px;
-    left: 199px;
+
     width: 9em;
     height: 2.8em;
     background: #EA2340;
     box-shadow: #00000052;
-    opacity: 1;
     border: none;
     text-align: center;
     font: Bold 10px/28px Raleway;
-    letter-spacing: 0;
     color: #FFFFFF;
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 0em 0em 0em 0em;
 }
 
 .footer_redline {
     /*background-image: url(images/redline.svg);*/
 
-    padding-top: 0.6em;
+    padding-top: 1em;
     height: 0em;
-    width: 1060px;
+    width: 100%;
     border-bottom: 0.9em solid #EA2340;
     border-left: 0;
     border-right: 35px solid transparent;
 }
 
-.footer_block {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
+/*.footer_block {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: flex-start;*/
+/*}*/
 
 /*Далее работаю с FOOTER 2-й страницы*/
+/*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
+/*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
+/*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
 /*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*//*Далее работаю с FOOTER 2-й страницы*/
 
-.footer2_beginning {
-    height: 65px;
-    width: 73em;
-    /*margin: 0em 0em 0em 0em;*/
-    /*padding: 0em 0em 0em 0em;*/
+
+.footer2 {
+    height: 300px;
+    background: #062639 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
 }
 
-.footer2_flex {
-    width: 73em;
-    display: flex;
+.footer2_beginning {
+    /*height: 65px;*/
+    /*width: 73em;*/
+    margin: 0em 0em 0em 0em;
+    padding: 0em 0em 0em 0em;
+    /*display: inline-flex;*/
 }
 
 .footer2_text1 {
     /*top: 2843px;*/
     /*left: 160px;*/
-    width: 66em;
+    /*width: 6em;*/
     /*height: 61px;*/
-    text-align: left;
+    /*text-align: left;*/
     /*font: Regular 16px/24px Raleway;    почему ошибка*/
     font: Bold 7px/14px Raleway;
     letter-spacing: 0;
     color: #FFFFFF;
     opacity: 1;
-    display: inline-block;
-    margin: 0em 0em 0em 12em;
+    /*display: inline-block;*/
+    padding: 3em 0em 0em 12em;
 }
 
 .logo {
-    padding: 2em 2em 2em 2em;
-    display: inline-block;
-}
-
-.footer2_redline {
-    /*margin: -3.75em 0em 7em 0em;*/
-    height: 135px;
-    width: 44em;
-    border-bottom: 8.2em solid #EA2340;
-    border-left: 0;
-    border-right: 17em solid transparent;
-    display: inline-block;
-}
-
-.navigationText {
-    /*top: 33px;*/
-    /*left: 1432px;*/
-    width: 7em;
-    height: 19px;
-    text-align: right;
-    font: Bold 12px/19px Raleway;
-    letter-spacing: 0;
-    color: #FFFFFF;
-    opacity: 1;
-    /*right: 0;*/
-    display: inline;
-    margin-left: 2em;
-    
-
+    /*padding: 2em 2em 2em 2em;*/
+    text-align: center;
+    padding: 1.5em 0em 0em 4em;
 }
 
 
-.NavigationTextBlockFooter2 {
-    /*margin-left: 33em;*/
-    text-align: right;
-    width: 25em;
-
-    /*margin: -1em 2.7em 0em 0em;*/
-
-    /*font: Bold 19px/12px Raleway;*/
-    display: inline-block;
-}
-
-.socialNets {
-    display: inline-block;
+.socialNetBlock {
+    display: inline-flex;
     /*top: 2854px;*/
     /*left: 1496px;*/
-    width: 40px;
-    height: 20px;
+    width: 20%;
+    /*height: 20px;*/
     text-align: right;
     font: Bold 30px/20px Font Awesome;
     letter-spacing: 2.58px;
     color: #FFFFFF;
     opacity: 1;
-    margin-right: 0em;
+    /*padding: 0.5em 0em 0em 0em;*/
+}
 
+.socialNetsPic {
+    display: inline-block;
+    /*top: 2854px;*/
+    /*left: 1496px;*/
+    width: 10px;
+    height: 10px;
+    /*margin-left: 27em;*/
+    /*margin-top: -5em;*/
+}
 
+.socialNets {
+    display: inline-flex;
+    /*top: 2854px;*/
+    /*left: 1496px;*/
+    width: 7%;
+    /*height: 10px;*/
+    text-align: right;
+    font: Bold 30px/20px Font Awesome;
+    letter-spacing: 2.58px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 0.5em 0em 0em 0em;
 }
 
 .End {
@@ -196,28 +177,84 @@
     /*margin-left: 19em;*/
     /*margin: 0em 0em 0em 19em;*/
     transform: rotate3d(0, 0, 0, 22grad);
+    /*padding: 0.5em 0em 0em 0em;*/
 }
 
-.socialNetsPic {
-    display: inline-block;
-    top: 2854px;
-    left: 1496px;
-    width: 10px;
-    height: 10px;
-    /*margin-left: 27em;*/
-    /*margin-top: -5em;*/
+.footer2_flex {
+     /*width: 50%;*/
+     /*display: inline-flex;*/
+     /*height: 10%;*/
+ }
+
+.footer2_redline {
+    /*margin: -3.75em 0em 7em 0em;*/
+    /*height: 190px;*/
+    /*width: 50%;*/
+    /*border-bottom: 8.5em solid #EA2340;*/
+    /*border-left: 0em;*/
+    /*background-color: #EA2340;*/
+    /*border-right: 17em solid transparent;*/
+    height: 12.9em;
+    /*display: inline;*/
+    margin-top: 1em;
+
+    /*height: 0;*/
+    width: 100px;
+    border-bottom: 200px solid #EA2340;
+    border-left: 0px solid transparent;
+    border-right: 400px solid transparent;
 }
 
-.socialNetBlock {
-    display: inline-block;
-    margin: 0em 0em 0em 8em;
+.footer2_redtext1 {
+    /*background-color: gold;*/
+    text-align: left;
+    font: Bold 34px/34px Bebas Neue;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    width: 70%;
+    margin: 2em 0em 0em 3em;
 }
 
-.footer2_redtext {
-background-color: gold;
+.footer2_redtext2 {
+    /*background-color: gold;*/
+    text-align: left;
+    font: Bold 34px/34px Bebas Neue;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    width: 80%;
+    margin: 0em 0em 0em 3em;
+}
+
+.navigationText {
+    /*top: 33px;*/
+    /*left: 1432px;*/
+    /*width: 0em;*/
+    /*height: 19px;*/
+    text-align: right;
+    font: Bold 12px/19px Raleway;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+    /*right: 0;*/
+    display: inline-flex;
+    /*margin-left: 2em;*/
 }
 
 
+.NavigationTextBlockFooter2 {
+    /*margin-left: 33em;*/
+    text-align: right;
+    width: 90%;
+    /*margin: -1em 2.7em 0em 0em;*/
+    /*font: Bold 19px/12px Raleway;*/
+    display: inline-flex;
+}
+
+.whiteLine {
+    color: #FFFFFF;
+}
 
 
 .three_elem {
@@ -251,7 +288,23 @@ background-color: gold;
     width: 10em;
     font: Bold 8px/0px Raleway;
     color: darkgrey;
+}
 
+.phone {
+    text-align: right;
+    font: Bold 44px/54px Bebas Neue;
+    letter-spacing: 0;
+    color: #EA2340;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.address {
+    text-align: right;
+    font: Bold 16px/24px Raleway;
+    letter-spacing: 0;
+    color: green;
+    opacity: 1;
 }
 
 .hidden{
