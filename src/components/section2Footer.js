@@ -42,7 +42,7 @@ function Section2Footer(props) {
                     </div>
                 </Col>
                 <Col sm={6}>
-                    { props.children }
+                    {props.children}
                     <Row>
                         <p className='whiteLine'>__________________________________________________________________________________________________________</p>
                     </Row>
@@ -69,16 +69,18 @@ function Section2Footer(props) {
                             </div>
                         </Col>
                     </Row>
-                    <Col sm={5}>
-                        <Row>
-                            <p className='phone'>
-                                08-616-8800-55
-                            </p>
-                        </Row>
-                        <Row>
-                            <p className='address'>1600 Amphitheatre Pkwy Mountain View, CA 94043, USA</p>
-                        </Row>
-                    </Col>
+                    <Row>
+                        <Col sm={4}>
+                            <Row>
+                                <p className='phone'>
+                                    08-616-8800-55
+                                </p>
+                            </Row>
+                            <Row>
+                                <p className='address'>1600 Amphitheatre Pkwy Mountain View, CA 94043, USA</p>
+                            </Row>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Container>
