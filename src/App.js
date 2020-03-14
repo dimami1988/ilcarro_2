@@ -72,16 +72,19 @@ class App extends React.Component {
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
+
                 <Section2Footer>
-                    <NavBar/>
+                <NavBar/>
                 </Section2Footer>
                 {/*<Component1></Component1>*/}
+
             </div>
 
         )
     }
 
     renderLogin() {
+
         return (
             <div>
                 <MainHeader showSignUp={this.showSignUp}/>
@@ -96,6 +99,7 @@ class App extends React.Component {
             </div>
         )
     }
+
 
     renderSignUp() {
         return (
