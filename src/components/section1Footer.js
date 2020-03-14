@@ -2,20 +2,19 @@ import React from "react";
 import '../Footers.css';
 
 class Section1Footer extends React.Component {
-    state = {
-        whichButtonPressed: "home"
 
-    };
 
     constructor(props) {
         super(props);
         this.state = {
-            whichButtonPressed: props.whichButtonPressed
+            whichButtonPressed: "home"
 
         };
     }
 
     render() {
+        let t = this.getJoinBtn();
+        console.log(this.state.whichButtonPressed);
         return (
             <div className="footer1">
                 <div className="footer_block">
@@ -32,21 +31,20 @@ class Section1Footer extends React.Component {
                         </div>
                         <div className="footer_text3">
                             <p className="text3">Affordable prices Guaranteed cars</p>
-                            {this.getJoinBtn()}
-
+                            {t}
                         </div>
                     </div>
                 </div>
-
             </div>
         )
     }
 
     getJoinBtn() {
-        if (!(this.state.whichButtonPressed === "registration")) {
+        if (this.state.whichButtonPressed !== "registration") {
             return (
                 <button id="join_footer_button" onClick={() => {
-                    this.props.showSignUp("registration")
+                    alert('click');
+                    //this.setState({whichButtonPressed: "registration"});
                 }}
                         className={'footer_button'}>Join now!</button>
             )

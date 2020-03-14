@@ -18,13 +18,13 @@ class MainHeader extends React.Component {
     render() {
         return (
             <div className={'HeaderBox'}>
-                <Container>
+                <Container fluid={"true"}>
                     <Row>
-                        <Col sm={6} >
+                        <Col sm={4} >
                             <img src={Logo} alt={'logo'} onClick={()=>{this.props.showFindYourCar(this.state.whichButtonPressed)}}/>
                         </Col>
 
-                        <Col sm={6}>
+                        <Col sm={8}>
                             <nav>
                                 <p className={'navigationText'}>Search</p>
                                 <p className={'navigationText'}>Let the car work</p>
