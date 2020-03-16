@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 class SearchWithoutRegistrationBlock extends React.Component {
     render() {
         return (
-                <Container  fluid={"true"}>
+                <Container  fluid={"true"} className={"searchWithoutReg"}>
                     <Row>
                         <Col sm={4} className={'searchWithoutRegContainer'}>
                             <p className={'redText '}>Find your car now</p>
@@ -39,10 +39,10 @@ class SearchWithoutRegistrationBlock extends React.Component {
                                         <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
                                         <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
                                         <p>2020</p>
-                                        <div className={"whitePriceBox"}>
-                                            <p className={"dollarSign"}>$</p>
-                                            <p className={"price"}>300</p>
-                                            <p className={"perDay"}>PER DAY</p>
+                                        <div className={"blackPriceBox"}>
+                                            <p className={"dollarSignBlack"}>$</p>
+                                            <p className={"priceBlack"}>300</p>
+                                            <p className={"perDaySmall"}>PER DAY</p>
                                         </div>
                                     </Col>
 
@@ -50,10 +50,58 @@ class SearchWithoutRegistrationBlock extends React.Component {
                                         <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
                                         <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
                                         <p>2020</p>
-                                        <div className={"whitePriceBox"}>
-                                            <p className={"dollarSign"}>$</p>
-                                            <p className={"price"}>300</p>
-                                            <p className={"perDay"}>PER DAY</p>
+                                        <div className={"blackPriceBox"}>
+                                            <p className={"dollarSignBlack"}>$</p>
+                                            <p className={"priceBlack"}>300</p>
+                                            <p className={"perDaySmall"}>PER DAY</p>
+                                        </div>
+                                    </Col>
+
+                                </Row>
+                                <Row className={"firstVehicleRow"}>
+                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
+                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
+                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
+                                        <p>2020</p>
+                                        <div className={"blackPriceBox"}>
+                                            <p className={"dollarSignBlack"}>$</p>
+                                            <p className={"priceBlack"}>300</p>
+                                            <p className={"perDaySmall"}>PER DAY</p>
+                                        </div>
+                                    </Col>
+
+                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
+                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
+                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
+                                        <p>2020</p>
+                                        <div className={"blackPriceBox"}>
+                                            <p className={"dollarSignBlack"}>$</p>
+                                            <p className={"priceBlack"}>300</p>
+                                            <p className={"perDaySmall"}>PER DAY</p>
+                                        </div>
+                                    </Col>
+
+                                </Row>
+                                <Row className={"firstVehicleRow"}>
+                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
+                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
+                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
+                                        <p>2020</p>
+                                        <div className={"blackPriceBox"}>
+                                            <p className={"dollarSignBlack"}>$</p>
+                                            <p className={"priceBlack"}>300</p>
+                                            <p className={"perDaySmall"}>PER DAY</p>
+                                        </div>
+                                    </Col>
+
+                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
+                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
+                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
+                                        <p>2020</p>
+                                        <div className={"blackPriceBox"}>
+                                            <p className={"dollarSignBlack"}>$</p>
+                                            <p className={"priceBlack"}>300</p>
+                                            <p className={"perDaySmall"}>PER DAY</p>
                                         </div>
                                     </Col>
 
