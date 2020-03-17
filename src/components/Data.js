@@ -1,10 +1,8 @@
-// import React from "react";
-// import Form from "./Form";
-// import Weather from "./Weather";
-// import URL from  "../components/Constants";
-//
-// class Data extends React.Component{
-//
+import React from "react";
+import URL from "../components/Constants";
+
+class Data extends React.Component {
+
 //     constructor(props) {
 //         super(props);
 //         this.state={
@@ -39,4 +37,32 @@
 //         )
 //     }
 // }
-// export default Data;
+
+    showWithoutregistrationFun = async () => {
+        fetch(URL + "/search", {
+            method: "GET",
+            body: JSON.stringify(data),
+            headers: {
+                "ascending": "true",
+                "current_page": 4,
+                "end_date": "12.12.2020",
+                "start_date": "12.12.2020",
+                "items_on_page": 6,
+                "latitude": 12,
+                "longitude ": 12,
+                "max_amount": 300,
+                "min_amount": 100,
+            },
+            credentials: "same-origin"
+        }).then(function (response) {
+            response.status     //=> number 100–599
+
+            return response.text()
+            console.log(response.text())
+        }, function (error) {
+            error.message //=> String
+        })
+    }
+}
+
+export default Data;
