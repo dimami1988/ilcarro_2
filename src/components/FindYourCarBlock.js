@@ -14,13 +14,14 @@ class FindYourCarBlock extends React.Component{
     }
     render() {
         return(
+
             <div className={"formWrapper"} style={{ backgroundImage: `url(${MainBackGroundImage}` }}>
 
                <div className={'searchContainer'}>
 
                 <p className={'redText ' }>Find your car now</p>
                 <p className={'greyText'}>Type your data and hit Y'alla</p>
-                <form action="" id="findCarForm">
+                <form  id="findCarForm">
                     <DatePicker1/>
                   <input className={'inputShape'} type="text" id={"location"} placeholder={" Location"}/>
                   <input className={'inputShape'} type="date" id="datefrom" placeholder={" From"}/>

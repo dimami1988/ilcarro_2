@@ -8,9 +8,9 @@ import Row from 'react-bootstrap/Row';
 class SearchWithoutRegistrationBlock extends React.Component {
     render() {
         return (
-                <Container>
+                <Container  fluid={"true"}>
                     <Row>
-                        <Col sm={6} className={'searchWithoutRegContainer'}>
+                        <Col sm={4} className={'searchWithoutRegContainer'}>
                             <p className={'redText '}>Find your car now</p>
                             <form action="submit" id="findCarForm">
 
@@ -36,27 +36,27 @@ class SearchWithoutRegistrationBlock extends React.Component {
                             <Container>
                                 <Row className={"firstVehicleRow"}>
                                     <Col sm={6}  classname={"registrationPhotoContainer"}>
-                                        <div><img src={Vehicle1Square} alt={'vehicle inline-block'}/></div>
-                                        <p className={"vehicleName2 vehicleBlueName inline-block"}>BLACKSTAR</p>
+                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
+                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
                                         <p>2020</p>
-                                        <div className={"whitePriceBox inline-block"}>
-                                            <p className={"dollarSign inline-block"}>$</p>
-                                            <p className={"price inline-block"}>300</p>
-                                            <p className={"perDay inline-block"}>PER DAY</p>
+                                        <div className={"whitePriceBox"}>
+                                            <p className={"dollarSign"}>$</p>
+                                            <p className={"price"}>300</p>
+                                            <p className={"perDay"}>PER DAY</p>
                                         </div>
                                     </Col>
 
-                                    <Col sm={6}>
-                                        <div><img src={Vehicle1Square} alt={'vehicle inline-block'}/>
-                                        </div>
-                                        <p className={"vehicleName2 vehicleBlueName inline-block"}>BLACKSTAR</p>
+                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
+                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
+                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
                                         <p>2020</p>
-                                        <div className={"whitePriceBox inline-block"}>
-                                            <p className={"dollarSign inline-block"}>$</p>
-                                            <p className={"price inline-block"}>300</p>
-                                            <p className={"perDay inline-block"}>PER DAY</p>
+                                        <div className={"whitePriceBox"}>
+                                            <p className={"dollarSign"}>$</p>
+                                            <p className={"price"}>300</p>
+                                            <p className={"perDay"}>PER DAY</p>
                                         </div>
                                     </Col>
+
                                 </Row>
                             </Container>
 
