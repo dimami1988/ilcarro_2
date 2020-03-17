@@ -3,9 +3,54 @@ import Vehicle1Square from "../images/squareImages/azlk.png";
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import apiManager from "./Data";
+import URL from "./Constants";
 // import PriceRangeSlider from './PriceRangeSlider'
 
 class SearchWithoutRegistrationBlock extends React.Component {
+    componentDidMount() {
+        const data = {
+            "ascending": "true",
+            "current_page": 4,
+            "end_date": "12.12.2020",
+            "start_date": "12.12.2020",
+            "items_on_page": 6,
+            "latitude": 12,
+            "longitude ": 12,
+            "max_amount": 300,
+            "min_amount": 100,
+        };
+
+        // const TestURL = URL + "/filters";
+        // console.log(TestURL);
+        // fetch(TestURL,{
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // }).then(
+        //     (response) => {
+        //         response.json().then(
+        //             (json) => {
+        //                 debugger;
+        //             },
+        //             (err) => {
+        //                 debugger;
+        //             }
+        //         )
+        //     }
+        // );
+
+        apiManager.showWithoutregistrationFun(data).then(
+            (jsonData)=> {
+                debugger;
+
+                // const result = parceData
+            }
+        ,(err) => {
+            debugger;
+        })
+    }
+
     render() {
         return (
                 <Container  fluid={"true"} className={"searchWithoutReg"}>
