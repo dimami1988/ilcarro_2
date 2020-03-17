@@ -38,6 +38,20 @@ class Data extends React.Component {
 //     }
 // }
 
+    getFilters = async (data) => {
+        const response = await fetch(URL + "/filters", {
+            method: "GET",
+            // body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: "same-origin"
+        });
+
+        return await response.json();
+
+    };
+
     showWithoutregistrationFun = async (data) => {
             const response = await fetch(URL + "/filters", {
                 method: "GET",
@@ -50,7 +64,7 @@ class Data extends React.Component {
 
             return await response.json();
 
-    }
+    };
 }
 
 const apiManager = new Data();

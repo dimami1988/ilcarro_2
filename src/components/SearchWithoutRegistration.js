@@ -5,7 +5,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import apiManager from "./Data";
 import URL from "./Constants";
+import CarFiltersDataSource from "./CarFiltersDataSourse";
 // import PriceRangeSlider from './PriceRangeSlider'
+import CarFilter from './CarFilters';
 
 class SearchWithoutRegistrationBlock extends React.Component {
     componentDidMount() {
@@ -40,15 +42,16 @@ class SearchWithoutRegistrationBlock extends React.Component {
         //     }
         // );
 
-        apiManager.showWithoutregistrationFun(data).then(
-            (jsonData)=> {
-                debugger;
+        // apiManager.showWithoutregistrationFun(data).then(
+        //     (jsonData)=> {
+        //         debugger;
+        //         // const result = parceData
+        //     }
+        // ,(err) => {
+        //     debugger;
+        // })
 
-                // const result = parceData
-            }
-        ,(err) => {
-            debugger;
-        })
+
     }
 
     render() {
@@ -58,12 +61,12 @@ class SearchWithoutRegistrationBlock extends React.Component {
                         <Col sm={4} className={'searchWithoutRegContainer'}>
                             <p className={'redText '}>Find your car now</p>
                             <form action="submit" id="findCarForm">
-
                                 <input className={'inputShape'} type="text" id={"location"} placeholder={" Location"}/>
                                 <input className={'inputShape'} type="date" id="datefrom" placeholder={" From"}/>
                                 <input className={'inputShape'} type="date" id="datetill" placeholder={" Till"}/>
 
                                 <div className={"sortBigWrapper"}>
+
                                     <p>Sort by:</p>
                                     <div className={"sortByWrapper"}>
                                         <div className={"lowToHigh"}><p>Price low to high</p></div>
@@ -74,6 +77,9 @@ class SearchWithoutRegistrationBlock extends React.Component {
                                       {/*<PriceRangeSlider/>*/}
                                 </div>
                             </form>
+
+                            <CarFilter/>
+
                             <div className={"redLine"}></div>
                         </Col>
 
