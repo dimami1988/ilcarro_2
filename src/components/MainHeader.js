@@ -18,10 +18,13 @@ class MainHeader extends React.Component {
     render() {
         return (
             <div className={'HeaderBox'}>
-                <Container fluid={"true"}>
+                <Container>
                     <Row>
-                        <Col sm={4} >
-                            <img src={Logo} alt={'logo'} onClick={()=>{this.props.showFindYourCar(this.state.whichButtonPressed)}}/>
+                        <Col sm={4}>
+                            <div className='Logo'>
+                                <img src={Logo} alt={'logo'} onClick={() => {
+                                    this.props.showFindYourCar(this.state.whichButtonPressed)}}/>
+                            </div>
                         </Col>
 
                         <Col sm={8}>
@@ -29,8 +32,13 @@ class MainHeader extends React.Component {
                                 <p className={'navigationText'}>Search</p>
                                 <p className={'navigationText'}>Let the car work</p>
                                 <p className={'navigationText'}>Terms of use</p>
-                                <p onClick={() => {this.props.showSignUp(this.state.whichButtonPressed)}} className={(this.props.whichButtonPressed==="login") ? 'hidden' : 'navigationText'}>Sign up</p>
-                                <p onClick={() => {this.props.showLogin(this.state.whichButtonPressed)
+                                <p onClick={() => {
+                                    this.props.showSignUp(this.state.whichButtonPressed)
+                                }}
+                                   className={(this.props.whichButtonPressed === "login") ? 'hidden' : 'navigationText'}>Sign
+                                    up</p>
+                                <p onClick={() => {
+                                    this.props.showLogin(this.state.whichButtonPressed)
                                 }} className={'navigationText'}>Login</p>
                             </nav>
                         </Col>
