@@ -10,7 +10,7 @@ class FeedBacks2Rows extends React.Component {
         return (
             <Container fluid={"true"}>
                 <Row>
-                    <Col sm={6}>
+                    <Col sm={12}>
                         <div><p className={"blueBigText marginLeft"}>LATEST FEEDBACKS FROM OUR CUSTOMERS</p></div>
                     </Col>
 
