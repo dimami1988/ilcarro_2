@@ -16,6 +16,7 @@
     "react-dates": "^21.8.0",
     "react-day-picker": "^7.4.0",
     "react-dom": "^16.13.0",
+    "react-dropdown": "^1.7.0",
     "react-foundation": "^0.9.6",
     "react-pose": "^4.0.10",
     "react-router-dom": "^5.1.2",

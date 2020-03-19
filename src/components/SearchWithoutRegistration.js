@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Data from "./Data";
 // import PriceRangeSlider from './PriceRangeSlider'
 import apiManager from "./Data";
-
+import CarFilter from "./CarFilters";
 
 class SearchWithoutRegistrationBlock extends React.Component {
     componentDidMount() {
