@@ -39,7 +39,6 @@ class CarFilters extends React.Component{
 
         apiManager.getFilters().then(
             (jsonData)=> {
-
                 this.dataSource = new CarFiltersDataSource(jsonData);
                 // const result = parceData
                 this.setState({
