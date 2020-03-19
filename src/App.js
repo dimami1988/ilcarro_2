@@ -55,47 +55,39 @@ class App extends React.Component {
             return this.renderWithoutRegistration();
         } else if (this.state.whichButtonPressed === "home") {
             return this.renderFindYourCar();
-        } else {
-            return this.renderFindYourCar();
         }
-
-
     }
 
     renderFindYourCar() {
         return (
             <div>
                 <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}
-                            showFindYourCar={this.showFindYourCar}/>
+                            showFindYourCar={this.showFindYourCar}
+                            showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <Section1Footer>
                     <RedButton action={this.showSignUp}>Join Us</RedButton>
-                     {/*там где кнопка не нужна, я просто не пишу строку выше*/}
+                    {/*там где кнопка не нужна, я просто не пишу строку выше*/}
                 </Section1Footer>
                 {/*<Section1Footer showSignUp={this.showSignUp} whichButtonPressed={this.state.whichButtonPressed}/>*/}
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
-
                 <Section2Footer>
-                <NavBar/>
+                    <NavBar/>
                 </Section2Footer>
                 <Map/>
                 <Calendar/>
                 <RegStep1/>
-                {/*<Component1></Component1>*/}
-
             </div>
-
         )
     }
 
     renderLogin() {
-
         return (
             <div>
-                <MainHeader showSignUp={this.showSignUp}/>
-                <DatePicker1/>
+                <MainHeader showSignUp={this.showSignUp} showFindYourCar={this.showFindYourCar}
+                            showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <LoginForm/>
                 <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}
                                 whichButtonPressed={this.state.whichButtonPressed}/>
@@ -111,8 +103,9 @@ class App extends React.Component {
     renderSignUp() {
         return (
             <div>
-                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}/>
-                <DatePicker1/>
+                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}
+                            showFindYourCar={this.showFindYourCar}
+                            showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <SignUp/>
                 <Section1Footer showSignUp={this.showSignUp} whichButtonPressed={this.state.whichButtonPressed}/>
                 <MostPopular/>
@@ -126,7 +119,8 @@ class App extends React.Component {
     renderWithoutRegistration() {
         return (
             <div>
-                <MainHeader showSignUp={this.showSignUp}/>
+                <MainHeader showSignUp={this.showSignUp} showFindYourCar={this.showFindYourCar}
+                            showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <SearchWithoutRegistrationBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <Section2Footer>
                     <NavBar/>

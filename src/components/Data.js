@@ -38,31 +38,26 @@ class Data extends React.Component {
 //     }
 // }
 
-    showWithoutregistrationFun = async () => {
+
+
+    showWithoutregistrationFun = async (data) => {
         fetch(URL + "/search", {
             method: "GET",
             body: JSON.stringify(data),
-            headers: {
-                "ascending": "true",
-                "current_page": 4,
-                "end_date": "12.12.2020",
-                "start_date": "12.12.2020",
-                "items_on_page": 6,
-                "latitude": 12,
-                "longitude ": 12,
-                "max_amount": 300,
-                "min_amount": 100,
-            },
+
+
+
             credentials: "same-origin"
         }).then(function (response) {
-            response.status     //=> number 100–599
+   //         response.status     //=> number 100–599
 
             return response.text()
             console.log(response.text())
         }, function (error) {
-            error.message //=> String
+    //        error.message //=> String
         })
     }
 }
 
-export default Data;
+const apiManager= new Data();
+export default apiManager;

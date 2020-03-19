@@ -18,30 +18,37 @@
 }
 
 
+.navBox {
+
+    height: 65px;
+    display: inline-block;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navBox:hover {
+    background-color: red;
+}
 
 .navigationText {
     top: 33px;
-    left: 1432px;
-    width: 120px;
     height: 19px;
     text-align: left;
     font: Bold 16px/19px Raleway;
-    letter-spacing: 0;
     color: #FFFFFF;
-    right: 0;
-    display: inline-block;
-    margin-left: 2em;
+    cursor: pointer;
 }
 /* Изменение цвета ссылок при наведении курсора */
-.navigationText:hover {
-    background-color: red;
 
-}
+
+
 
 /* Добавить цвет для активной/текущей ссылки */
 .navigationText.active {
     background-color: grey;
     color: white;
+
+
 }
 
 .redText {
@@ -68,19 +75,20 @@
     margin-top: 0px;
 }
 .formWrapper{
-    background: transparent 0% 0% no-repeat padding-box;
+    /*background: transparent 0% 0% no-repeat padding-box;*/
     background-size: cover;
+    height: 766px;
 }
 
 
 .searchContainer{
-    margin-top: 143.1px;
-    top: 202px;
-    left: 0.40771484375px;
+    margin-top: 50px;
+    margin-bottom: 10px;
     width: 609px;
-    height: 379px;
+    height: 479px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #0000005F;
+
 }
 .inputShape{
     top: 311px;
@@ -114,8 +122,8 @@
     width: 67px;
     height: 10px;
     background: #EA2340 0% 0% no-repeat padding-box;
-    margin-left: 535px;
-    margin-top: 25px;
+    margin-left: 500px;
+    margin-top: 85px;
     margin-bottom: 25px;
     clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
 }
