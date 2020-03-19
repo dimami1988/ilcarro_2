@@ -38,35 +38,25 @@ class Data extends React.Component {
 //     }
 // }
 
-    getFilters = async (data) => {
-        const response = await fetch(URL + "/filters", {
-            method: "GET",
-            // body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            credentials: "same-origin"
-        });
-
-        return await response.json();
-
-    };
-
     showWithoutregistrationFun = async (data) => {
-            const response = await fetch(URL + "/filters", {
-                method: "GET",
-                // body: JSON.stringify(data),
-                headers: {
-                            'Content-Type': 'application/json'
-                        },
-                credentials: "same-origin"
-            });
+        fetch(URL + "/search", {
+            method: "GET",
+            body: JSON.stringify(data),
 
-            return await response.json();
 
-    };
+
+            credentials: "same-origin"
+        }).then(function (response) {
+   //         response.status     //=> number 100–599
+
+            return response.text()
+            console.log(response.text())
+        }, function (error) {
+    //        error.message //=> String
+        })
+    }
 }
 
-const apiManager = new Data();
+const apiManager= new Data();
 
 export default apiManager;

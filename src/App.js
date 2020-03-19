@@ -13,13 +13,13 @@ import Section1Footer from "./components/section1Footer";
 import Section2Footer from "./components/section2Footer";
 import './App.css';
 import './Footers.css';
-import Component1 from "./components/Component";
 import NavBar from "./components/NavBar";
 import RedButton from "./components/RedButton";
 import Map from "./components/Map";
 import Calendar from "./components/Calendar";
 import 'react-day-picker/lib/style.css';
 import RegStep1 from "./components/RegStep1";
+import MapContainer from "./components/Map";
 
 class App extends React.Component {
 
@@ -55,47 +55,38 @@ class App extends React.Component {
             return this.renderWithoutRegistration();
         } else if (this.state.whichButtonPressed === "home") {
             return this.renderFindYourCar();
-        } else {
-            return this.renderFindYourCar();
         }
-
-
     }
 
     renderFindYourCar() {
         return (
             <div>
                 <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}
-                            showFindYourCar={this.showFindYourCar}/>
+                            showFindYourCar={this.showFindYourCar}
+                            showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <FindYourCarBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <Section1Footer>
                     <RedButton action={this.showSignUp}>Join Us</RedButton>
-                     {/*там где кнопка не нужна, я просто не пишу строку выше*/}
+                    {/*там где кнопка не нужна, я просто не пишу строку выше*/}
                 </Section1Footer>
                 {/*<Section1Footer showSignUp={this.showSignUp} whichButtonPressed={this.state.whichButtonPressed}/>*/}
                 <MostPopular/>
                 <Section2MainBlock/>
                 <FeedBacks2Rows/>
-
                 <Section2Footer>
-                <NavBar/>
+                    <NavBar/>
                 </Section2Footer>
-                <Map/>
-                <Calendar/>
                 <RegStep1/>
-                {/*<Component1></Component1>*/}
-
+                <MapContainer/>
             </div>
-
         )
     }
 
     renderLogin() {
-
         return (
             <div>
-                <MainHeader showSignUp={this.showSignUp}/>
-                <DatePicker1/>
+                <MainHeader showSignUp={this.showSignUp} showFindYourCar={this.showFindYourCar}
+                            showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <LoginForm/>
                 <Section1Footer showSignUp={this.showLogin} showLogin={this.showLogin}
                                 whichButtonPressed={this.state.whichButtonPressed}/>
@@ -111,8 +102,9 @@ class App extends React.Component {
     renderSignUp() {
         return (
             <div>
-                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}/>
-                <DatePicker1/>
+                <MainHeader showSignUp={this.showSignUp} showLogin={this.showLogin}
+                            showFindYourCar={this.showFindYourCar}
+                            showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <SignUp/>
                 <Section1Footer showSignUp={this.showSignUp} whichButtonPressed={this.state.whichButtonPressed}/>
                 <MostPopular/>
@@ -126,7 +118,8 @@ class App extends React.Component {
     renderWithoutRegistration() {
         return (
             <div>
-                <MainHeader showSignUp={this.showSignUp}/>
+                <MainHeader showSignUp={this.showSignUp} showFindYourCar={this.showFindYourCar}
+                            showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <SearchWithoutRegistrationBlock showSearchWithoutRegistration={this.showSearchWithoutRegistration}/>
                 <Section2Footer>
                     <NavBar/>
