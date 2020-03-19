@@ -24,7 +24,7 @@ class MainHeader extends React.Component {
                             <div className='Logo' onClick={() => {
                                 this.props.showFindYourCar(this.state.whichButtonPressed)
                             }}>
-                                <img src={Logo} alt={'logo'} />
+                                <img src={Logo} alt={'logo'}  />
                             </div>
                         </Col>
 

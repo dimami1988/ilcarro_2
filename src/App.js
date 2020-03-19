@@ -13,13 +13,13 @@ import Section1Footer from "./components/section1Footer";
 import Section2Footer from "./components/section2Footer";
 import './App.css';
 import './Footers.css';
-import Component1 from "./components/Component";
 import NavBar from "./components/NavBar";
 import RedButton from "./components/RedButton";
 import Map from "./components/Map";
 import Calendar from "./components/Calendar";
 import 'react-day-picker/lib/style.css';
 import RegStep1 from "./components/RegStep1";
+import MapContainer from "./components/Map";
 
 class App extends React.Component {
 
@@ -76,9 +76,8 @@ class App extends React.Component {
                 <Section2Footer>
                     <NavBar/>
                 </Section2Footer>
-                <Map/>
-                <Calendar/>
                 <RegStep1/>
+                <MapContainer/>
             </div>
         )
     }
