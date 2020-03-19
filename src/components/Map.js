@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
@@ -20,7 +18,7 @@ class SimpleMap extends Component {
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     // bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_KEY, language: 'en', }}
-                    bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_KEY, language: 'en', }}
+                    bootstrapURLKeys={{ key: "AIzaSyDeWdJzrBujugGQxR4bnP-UeVIV9LCeWwA", language: 'en', }}
                     /*process.env.GOOGLE_MAPS_API, language: 'en'*/
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
@@ -36,6 +34,54 @@ class SimpleMap extends Component {
     }
 }
 export default SimpleMap;
+
+
+
+
+// import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+// import React from "react";
+//
+// export class MapContainer extends React.Component {
+//
+//     static defaultProps = {
+//         center: {
+//             lat: 59.95,
+//             lng: 30.33
+//         },
+//         zoom: 11
+//     };
+//     onMarkerClick = (props, marker, e) =>
+//         this.setState({
+//             selectedPlace: {name:"Ashkelon"},
+//             activeMarker: marker,
+//             showingInfoWindow: true
+//         });
+//
+//     render() {
+//         return (
+//             <Map google={this.props.google} zoom={14}
+//                  defaultCenter={this.props.center}
+//                  defaultZoom={this.props.zoom}
+//             >
+//
+//                 <Marker onClick={this.onMarkerClick}
+//                         name={'Current location'} />
+//
+//                 <InfoWindow >
+//                     <div>
+//                         {/*<h1>{this.state.selectedPlace.name}</h1>*/}
+//                         <h1>"Ashkelon"</h1>
+//                     </div>
+//
+//                 </InfoWindow>
+//             </Map>
+//         );
+//     }
+// }
+//
+// export default GoogleApiWrapper({
+//     apiKey: ("AIzaSyDeWdJzrBujugGQxR4bnP-UeVIV9LCeWwA")
+// })(MapContainer)
 
 
 // function Map() {
