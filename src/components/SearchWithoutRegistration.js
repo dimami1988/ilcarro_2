@@ -3,6 +3,7 @@ import Vehicle1Square from "../images/squareImages/azlk.png";
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+
 import Data from "./Data";
 // import PriceRangeSlider from './PriceRangeSlider'
 import apiManager from "./Data";
@@ -33,12 +34,12 @@ class SearchWithoutRegistrationBlock extends React.Component {
                         <Col sm={4} className={'searchWithoutRegContainer'}>
                             <p className={'redText '}>Find your car now</p>
                             <form action="submit" id="findCarForm">
-
                                 <input className={'inputShape'} type="text" id={"location"} placeholder={" Location"}/>
                                 <input className={'inputShape'} type="date" id="datefrom" placeholder={" From"}/>
                                 <input className={'inputShape'} type="date" id="datetill" placeholder={" Till"}/>
 
                                 <div className={"sortBigWrapper"}>
+
                                     <p>Sort by:</p>
                                     <div className={"sortByWrapper"}>
                                         <div className={"lowToHigh"}><p>Price low to high</p></div>
@@ -49,6 +50,9 @@ class SearchWithoutRegistrationBlock extends React.Component {
                                       {/*<PriceRangeSlider/>*/}
                                 </div>
                             </form>
+
+                            <CarFilter/>
+
                             <div className={"redLine"}></div>
                         </Col>
 

@@ -38,8 +38,6 @@ class Data extends React.Component {
 //     }
 // }
 
-
-
     showWithoutregistrationFun = async (data) => {
         fetch(URL + "/search", {
             method: "GET",
@@ -60,4 +58,5 @@ class Data extends React.Component {
 }
 
 const apiManager= new Data();
+
 export default apiManager;
