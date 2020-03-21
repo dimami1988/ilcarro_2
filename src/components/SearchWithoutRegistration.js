@@ -78,7 +78,7 @@ class SearchWithoutRegistrationBlock extends React.Component {
                                 </div>
                             </form>
 
-                            <CarFilter/>
+                            {/*<CarFilter/>*/}
 
                             <div className={"redLine"}></div>
                         </Col>

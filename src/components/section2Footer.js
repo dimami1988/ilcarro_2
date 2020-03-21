@@ -42,7 +42,10 @@ function Section2Footer(props) {
                     </div>
                 </Col>
                 <Col sm={6}>
-                    {props.children}
+                    <p className='NavBarFooter2'>
+                        {props.children}
+                    </p>
+
                     <Row>
                         <p className='whiteLine'>__________________________________________________________________________________________________________</p>
                     </Row>
@@ -59,7 +62,7 @@ function Section2Footer(props) {
                                 </div>
                             </div>
                         </Col>
-                        <Col className="footer2_cities2">
+                        <Col sm={2} className="footer2_cities2">
                             <div>
                                 <p>Vienna</p>
                                 <p>Moscow</p>
@@ -68,8 +71,6 @@ function Section2Footer(props) {
                                 <p>Seattle</p>
                             </div>
                         </Col>
-                    </Row>
-                    <Row>
                         <Col sm={4}>
                             <Row>
                                 <p className='phone'>
@@ -81,6 +82,7 @@ function Section2Footer(props) {
                             </Row>
                         </Col>
                     </Row>
+
                 </Col>
             </Row>
         </Container>

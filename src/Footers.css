@@ -252,6 +252,11 @@
     display: inline-flex;
 }
 
+.NavBarFooter2 {
+    padding-left: 8em;
+    color: #FFFFFF;
+}
+
 .whiteLine {
     color: #FFFFFF;
 }
@@ -277,15 +282,16 @@
 
 .footer2_cities1 {
     text-align: left;
-    width: 10em;
+    width: 8em;
     font: Bold 8px/0px Raleway;
     color: darkgrey;
 
 }
 
 .footer2_cities2 {
+    padding-top: 3.3%;
     text-align: left;
-    width: 10em;
+    width: 8em;
     font: Bold 8px/0px Raleway;
     color: darkgrey;
 }
@@ -303,7 +309,7 @@
     text-align: right;
     font: Bold 16px/24px Raleway;
     letter-spacing: 0;
-    color: green;
+    color: #FFFFFF;
     opacity: 1;
 }
 

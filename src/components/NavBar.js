@@ -1,5 +1,6 @@
 import Row from "react-bootstrap/Row";
 import React from "react";
+import {Link} from "react-router-dom";
 
 
 
@@ -7,11 +8,37 @@ function NavBar (props) {
 
     return(
     <Row sm={6} className='NavigationTextBlockFooter2'>
-        <p className='navigationText'>Search</p>
-        <p className='navigationText'>Let the car work</p>
-        <p className='navigationText'>Terms of use</p>
-        <p className='navigationText'>Sign up</p>
-        <p className='navigationText'>Log in</p>
+
+        <li className='navigationText'>
+            <Link to='/search'>
+            Search
+            </Link>
+        </li>
+
+        <li className='navigationText'>
+            <Link to='/letTheCarWork'>
+            Let the car work
+            </Link>
+        </li>
+
+        <li className='navigationText'>
+            <Link to='/terms'>
+            Terms of use
+            </Link>
+        </li>
+
+        <li className='navigationText'>
+            <Link to='/signUp'>
+            Sign up
+            </Link>
+        </li>
+
+        <li className='navigationText'>
+            <Link to='/login'>
+            Log in
+            </Link>
+        </li>
+
     </Row>
     )
 }
