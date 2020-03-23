@@ -5,13 +5,14 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import {Link} from "react-router-dom";
+import moment from "moment";
 
 
 class FindYourCarBlock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: undefined
+            startDate: moment()
         };
     }
 
