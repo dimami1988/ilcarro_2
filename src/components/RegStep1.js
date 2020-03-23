@@ -10,6 +10,7 @@ import Col from "react-bootstrap/Col";
 import Calendar from "./Calendar";
 // import GMap from "google-map-react/develop/GMap";
 import Map from "./Map";
+import SingleVehicle from "./SingleVehicle";
 
 
 function Section2Footer(props) {
@@ -19,8 +20,8 @@ function Section2Footer(props) {
         <Container fluid={'true'}>
             <Row>
                 <Col sm={8}>
-                    <div>
-                        <h1>Может уже хоть что-нибудь наверстаешь, Денис-бездельник?</h1>
+                    <div className={"singleVehicleMargin"}>
+                    <SingleVehicle/>
                     </div>
                 </Col>
                 <Col sm={4}>

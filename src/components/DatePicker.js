@@ -1,28 +1,59 @@
 import React, { Component } from 'react';
-import DatePicker from "react-datepicker";
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
 
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-// CSS Modules, react-datepicker-cssmodules.css
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+class DatePicker1 extends Component {
 
-class DatePicker1 extends React.Component {
-    state = {
-        startDate: new Date()
-    };
+    // https://appdividend.com/2018/09/24/react-datepicker-tutorial-example-from-scratch/
 
-    handleChange = date => {
+    // https://reactdatepicker.com/#example-exclude-times
+
+    // https://www.npmjs.com/package/react-datepicker
+    
+    constructor (props) {
+
+        super(props);
+        this.state = {
+            startDate: moment()
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(date) {
         this.setState({
             startDate: date
-        });
-    };
+        })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        let main = this.state.startDate;
+        console.log(main.format('L'));
+    }
 
     render() {
         return (
-            <DatePicker
-                selected={this.state.startDate}
-                onChange={this.handleChange}
-            />
+            <div className = "container">
+                <h3>React Datepicker Example</h3>
+                <form onSubmit={ this.handleSubmit }>
+                    <div className="form-group">
+                        <label>Select Date: </label>
+                        <DatePicker
+                            selected={ this.state.startDate }
+                            onChange={ this.handleChange }
+                            name="startDate"
+                            dateFormat="MM/DD/YYYY"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <button className="btn btn-success">Add Date</button>
+                    </div>
+                </form>
+            </div>
         );
     }
 }

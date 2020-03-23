@@ -3,141 +3,49 @@ import Vehicle1Square from "../images/squareImages/azlk.png";
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-
+import CarFilters from "./CarFilters";
+import Search from "./SearchWithoutRegistrationComponents/Search"
 import Data from "./Data";
-// import PriceRangeSlider from './PriceRangeSlider'
+import PriceRangeSlider from './PriceRangeSlider'
 import apiManager from "./Data";
-
+import FiltersBlock from "./SearchWithoutRegistrationComponents/FiltersBlock";
+import {Link} from "react-router-dom";
+import TabSearchMapFilters from "./SearchWithoutRegistrationComponents/TabSearchMapFilters";
+import SearchResultCars from "./SearchWithoutRegistrationComponents/SearchResultCars";
 
 class SearchWithoutRegistrationBlock extends React.Component {
     componentDidMount() {
-        const data ={
+        const data = {
             "ascending": "true",
-                "current_page": 4,
-                "end_date": "12.12.2020",
-                "start_date": "12.12.2020",
-                "items_on_page": 6,
-                "latitude": 12,
-                "longitude ": 12,
-                "max_amount": 300,
-                "min_amount": 100,
+            "current_page": 4,
+            "end_date": "12.12.2020",
+            "start_date": "12.12.2020",
+            "items_on_page": 6,
+            "latitude": 12,
+            "longitude ": 12,
+            "max_amount": 300,
+            "min_amount": 100,
         };
         debugger;
-       apiManager.showWithoutregistrationFun(data);
+        apiManager.showWithoutregistrationFun(data);
 
     }
 
     render() {
         return (
-                <Container  fluid={"true"} className={"searchWithoutReg"}>
-                    <Row>
-                        <Col sm={4} className={'searchWithoutRegContainer'}>
-                            <p className={'redText '}>Find your car now</p>
-                            <form action="submit" id="findCarForm">
-                                <input className={'inputShape'} type="text" id={"location"} placeholder={" Location"}/>
-                                <input className={'inputShape'} type="date" id="datefrom" placeholder={" From"}/>
-                                <input className={'inputShape'} type="date" id="datetill" placeholder={" Till"}/>
+            <Container fluid={"true"} className={"searchWithoutReg"}>
+                <Row>
+                    <Col sm={3}>
+                        <TabSearchMapFilters/>
+                    </Col>
+                    <Col sm={9}>
+                        <SearchResultCars/>
+                    </Col>
+                </Row>
+            </Container>
 
-                                <div className={"sortBigWrapper"}>
+        )
+    }
+}
 
-                                    <p>Sort by:</p>
-                                    <div className={"sortByWrapper"}>
-                                        <div className={"lowToHigh"}><p>Price low to high</p></div>
-                                        <div className={"highToLow"}><p>Price high to low</p></div>
-                                    </div>
-
-                                    <p style={{margin: "5em"}}>Price by range($/per day):</p>
-                                      {/*<PriceRangeSlider/>*/}
-                                </div>
-                            </form>
-
-                            <CarFilter/>
-
-                            <div className={"redLine"}></div>
-                        </Col>
-
-                        <Col sm={8} className={"vehicleCardsContainer "}>
-                            <Container>
-                                <Row className={"firstVehicleRow"}>
-                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
-                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
-                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
-                                        <p>2020</p>
-                                        <div className={"blackPriceBox"}>
-                                            <p className={"dollarSignBlack"}>$</p>
-                                            <p className={"priceBlack"}>300</p>
-                                            <p className={"perDaySmall"}>PER DAY</p>
-                                        </div>
-                                    </Col>
-
-                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
-                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
-                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
-                                        <p>2020</p>
-                                        <div className={"blackPriceBox"}>
-                                            <p className={"dollarSignBlack"}>$</p>
-                                            <p className={"priceBlack"}>300</p>
-                                            <p className={"perDaySmall"}>PER DAY</p>
-                                        </div>
-                                    </Col>
-
-                                </Row>
-                                <Row className={"firstVehicleRow"}>
-                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
-                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
-                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
-                                        <p>2020</p>
-                                        <div className={"blackPriceBox"}>
-                                            <p className={"dollarSignBlack"}>$</p>
-                                            <p className={"priceBlack"}>300</p>
-                                            <p className={"perDaySmall"}>PER DAY</p>
-                                        </div>
-                                    </Col>
-
-                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
-                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
-                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
-                                        <p>2020</p>
-                                        <div className={"blackPriceBox"}>
-                                            <p className={"dollarSignBlack"}>$</p>
-                                            <p className={"priceBlack"}>300</p>
-                                            <p className={"perDaySmall"}>PER DAY</p>
-                                        </div>
-                                    </Col>
-
-                                </Row>
-                                <Row className={"firstVehicleRow"}>
-                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
-                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
-                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
-                                        <p>2020</p>
-                                        <div className={"blackPriceBox"}>
-                                            <p className={"dollarSignBlack"}>$</p>
-                                            <p className={"priceBlack"}>300</p>
-                                            <p className={"perDaySmall"}>PER DAY</p>
-                                        </div>
-                                    </Col>
-
-                                    <Col sm={6}  classname={"registrationPhotoContainer"}>
-                                        <div><img src={Vehicle1Square} alt={'vehicle '}/></div>
-                                        <p className={"vehicleName2 vehicleBlueName "}>BLACKSTAR</p>
-                                        <p>2020</p>
-                                        <div className={"blackPriceBox"}>
-                                            <p className={"dollarSignBlack"}>$</p>
-                                            <p className={"priceBlack"}>300</p>
-                                            <p className={"perDaySmall"}>PER DAY</p>
-                                        </div>
-                                    </Col>
-
-                                </Row>
-                            </Container>
-
-                        </Col>
-                    </Row>
-                </Container>
-
-                )
-                }
-                }
-
-                export default SearchWithoutRegistrationBlock;
+export default SearchWithoutRegistrationBlock;

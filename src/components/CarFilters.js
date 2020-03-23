@@ -1,8 +1,9 @@
 import React from "react";
 import apiManager from "./Data";
-import CarFiltersDataSource from "./CarFiltersDataSourse";
-import Dropdown from "react-bootstrap";
-import DropdownButton from "react-bootstrap";
+import CarFiltersDataSource from "./DataComponents/CarFiltersDataSource";
+import {Dropdown} from "react-bootstrap";
+import {DropdownButton} from "react-bootstrap";
+
 
 class CarFilters extends React.Component{
 

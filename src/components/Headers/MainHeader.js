@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../images/logo/LogoLight.svg";
+import Logo from "../../images/logo/LogoLight.svg";
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -21,7 +21,7 @@ class MainHeader extends React.Component {
                     <Row>
                         <Col sm={5}>
                             <div className='Logo'>
-                                <Link to='/'>
+                                <Link to='/' style={{textDecoration: 'none'}}>
                                     <img src={Logo} alt={'logo'}/>
                                 </Link>
                             </div>
@@ -29,37 +29,43 @@ class MainHeader extends React.Component {
 
                         <Col sm={7}>
                             <nav>
-                                <div className={"navBox"}><p >
-                                    <Link to='/searchUnReg' className={'navigationText'}>
+                                <div className={"navBox"}><p>
+                                    <Link to='/search' className={'navigationText'} style={{textDecoration: 'none'}}>
                                         Search
                                     </Link>
                                 </p></div>
-                                <div className={"navBox"}><p className={'navigationText'}>
 
-                                    Let the car work
+                                <div className={"navBox"}>
+                                    <p>
+                                        <Link to={'/letyourcarwork'} className={'navigationText'}
+                                              style={{textDecoration: 'none'}}>
+                                            Let the car work
+                                        </Link>
+                                    </p>
+                                </div>
 
-                                </p></div>
                                 <div className={"navBox"}><a href={"https://en.wikipedia.org/wiki/Carsharing"}><p
-                                    className={'navigationText'}>
+                                    className={'navigationText'} style={{textDecoration: 'none'}}>
 
                                     Terms of use
 
                                 </p></a></div>
                                 <div className={"navBox"}><p>
-                                    <Link to='/signup' className={(this.props.whichButtonPressed === "login") ? 'hidden' : 'navigationText'}>
+                                    <Link to='/signup'
+                                          className={(this.props.whichButtonPressed === "login") ? 'hidden' : 'navigationText'}
+                                          style={{textDecoration: 'none'}}>
                                         Sign up
                                     </Link>
                                 </p>
                                 </div>
 
                                 <div className={"navBox"}><p>
-                                    <Link to='/login' className={'navigationText'}>
+                                    <Link to='/login' className={'navigationText'} style={{textDecoration: 'none'}}>
                                         Login
                                     </Link>
                                 </p></div>
                             </nav>
                         </Col>
-
                     </Row>
                 </Container>
             </div>

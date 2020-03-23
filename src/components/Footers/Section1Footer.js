@@ -1,5 +1,5 @@
 import React from "react";
-import '../Footers.css';
+import '../../Footers.css';
 
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';

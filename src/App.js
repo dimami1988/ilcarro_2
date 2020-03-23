@@ -1,11 +1,11 @@
 import React from "react";
-import MainHeader from "./components/MainHeader";
+import MainHeader from "./components/Headers/MainHeader";
 import Section2MainBlock from "./components/Section2MainBlock";
 import FeedBacks2Rows from "./components/FeedBacks2Rows";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MostPopular from "./components/MostPopular";
-import Section1Footer from "./components/section1Footer";
-import Section2Footer from "./components/section2Footer";
+import Section1Footer from "./components/Footers/Section1Footer";
+import Section2Footer from "./components/Footers/Section2Footer";
 import './App.css';
 import './Footers.css';
 import NavBar from "./components/NavBar";

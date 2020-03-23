@@ -1,5 +1,5 @@
 import React from "react";
-import URL from "../components/Constants";
+import URL from "./DataComponents/Constants";
 
 class Data extends React.Component {
 

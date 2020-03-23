@@ -26,28 +26,27 @@ class Section2MainBlock extends React.Component {
                                 <p className={"perDay"}>PER DAY</p>
                             </div>
                         </div>
+                    </Col>
 
+                    <Col>
                         <div className={"inlineBlock "}><img className={"imageSizing"} src={Vehicle2} alt={'vehicle'}/>
-                            <p className={"vehicleName2 vehicleName"}>BLACKSTAR</p>
+                            <p className={"vehicleName"}>BLACKSTAR</p>
                             <div className={"whitePriceBox"}>
                                 <p className={"dollarSign"}>$</p>
                                 <p className={"price"}>300</p>
                                 <p className={"perDay"}>PER DAY</p>
                             </div>
                         </div>
+                    </Col>
+
+                    <Col>
                         <div className={"inlineBlock vehicle3"}><img className={"imageSizing "} src={Vehicle3}
                                                                      alt={'vehicle'}/>
                             <p className={"vehicleName3 vehicleName"}>PNEUMODADDY</p>
                             <div className={"whitePriceBox"}>
-                                <div className={"dollarBox"}>
-                                    <p className={"dollarSign"}>$</p>
-                                </div>
-                                <div className={"priceBox"}>
-                                    <p className={"price"}>180</p>
-                                </div>
-                                <div className={"perDayBox"}>
-                                    <p className={"perDay"}>PER DAY</p>
-                                </div>
+                                <p className={"dollarSign"}>$</p>
+                                <p className={"price"}>180</p>
+                                <p className={"perDay"}>PER DAY</p>
                             </div>
                         </div>
                     </Col>
